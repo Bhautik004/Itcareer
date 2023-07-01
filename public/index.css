@@ -1,0 +1,53 @@
+img.wp-smiley,
+img.emoji {
+    display: inline !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: 1em !important;
+    width: 1em !important;
+    margin: 0 0.07em !important;
+    vertical-align: -0.1em !important;
+    background: none !important;
+    padding: 0 !important;
+}
+
+
+.holder {
+    width: 100%; 
+    /* height: 350px; */
+    overflow: hidden;
+    padding: 10px;
+    font-family: Helvetica;
+}
+
+.holder .mask {
+    position: relative;
+    left: 0px;
+    top: 10px;
+    /* width: 100PX; */
+    height: 250px;
+    overflow: hidden;
+}
+
+.holder ul {
+    list-style: none;
+    margin: 0;  
+    padding: 0;
+    position: relative;
+}
+
+.holder ul li {
+    padding: 10px 10px;
+}
+
+.holder ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+/*! elementor - v3.12.1 - 02-04-2023 */
+.elementor-counter .elementor-counter-number-wrapper{display:flex;font-size:69px;font-weight:600;line-height:1}.elementor-counter .elementor-counter-number-prefix,.elementor-counter .elementor-counter-number-suffix{flex-grow:1;white-space:pre-wrap}.elementor-counter .elementor-counter-number-prefix{text-align:right}.elementor-counter .elementor-counter-number-suffix{text-align:left}.elementor-counter .elementor-counter-title{text-align:center;font-size:19px;font-weight:400;line-height:2.5}
+
+.elementor-element-22377fa ,.elementor-element-4705fdf , .elementor-element-1afd528{
+    text-align: center;
+}

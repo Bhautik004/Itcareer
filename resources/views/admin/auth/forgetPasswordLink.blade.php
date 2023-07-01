@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TechAstha | Forgot Password</title>
+  <title>It Career Computer Training Institute| Forgot Password</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -19,7 +19,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href=""><b>Tech</b> Astha</a>
+    <a href=""><b>It Career Computer Training</b> Institute</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">

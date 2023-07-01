@@ -70,6 +70,36 @@ foreach ($permissionData as $perArr) {
                         @endif
                     </li>
 
+                    <li class="nav-item">
+                        @if (check_permission('Branch', 'index') == '1')
+                            <a href="{{ route('branchs.index') }}"
+                                class="nav-link {{ request()->segment(2) == 'branchs' ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Branch</p>
+                            </a>
+                        @endif
+                    </li>
+
+                    <li class="nav-item">
+                        @if (check_permission('Student', 'index') == '1')
+                            <a href="{{ route('students.index') }}"
+                                class="nav-link {{ request()->segment(2) == 'students' ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Manage Student</p>
+                            </a>
+                        @endif
+                    </li>
+
+                    <li class="nav-item">
+                        @if (check_permission('Manager', 'index') == '1')
+                            <a href="{{ route('managers.index') }}"
+                                class="nav-link {{ request()->segment(2) == 'managers' ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Manage Managers</p>
+                            </a>
+                        @endif
+                    </li>
+
                    
 
                     

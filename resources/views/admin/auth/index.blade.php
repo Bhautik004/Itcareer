@@ -30,7 +30,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href=""><b>It Career </b> Institute</a>
+    <a href=""><b>It Career Computer Training</b> Institute</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">

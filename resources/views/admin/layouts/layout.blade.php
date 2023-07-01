@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>IT CAREER INSTITUTE</title>
+    <title>IT CAREER COMPUTER TRAINING INSTITUTE</title>
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link rel="icon" type="image/x-icon" href="{{ asset('logo.jpg') }}">
 
@@ -210,7 +210,7 @@
                 var state_id = this.value;
                 $("#city-dropdown").html('');
                 $.ajax({
-                    url:"{{url('get-cities-by-state')}}",
+                    url:"{{url('admin/get-cities-by-state')}}",
                     type: "POST",
                     data: {
                     state_id: state_id,
@@ -225,6 +225,36 @@
                     }
                 });
             });
+
+
+            var state_id = $('#state-dropdown').val();
+            var edit_form = $('#edit_form').val();
+            var city_id = $('#city_id').val();
+            if(state_id){
+                if(edit_form){
+                    $.ajax({
+                        url:"{{url('admin/get-cities-by-state')}}",
+                        type: "POST",
+                        data: {
+                        state_id: state_id,
+                        _token: '{{csrf_token()}}' 
+                        },
+                        dataType : 'json',
+                        success: function(result){
+                            $('#city-dropdown').html('<option value="0">Select City</option>'); 
+                            $.each(result.cities,function(key,value){
+                                $("#city-dropdown").append('<option value="'+value.id+'" >'+value.name+'</option>');
+                               
+                            });
+                             $("#city-dropdown").find('option[value="' + city_id + '"]').attr("selected", "selected");
+
+                        }
+                    });
+                }
+            }
+
+             
+
         });
     </script>
 </body>

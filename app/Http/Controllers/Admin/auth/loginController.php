@@ -141,10 +141,5 @@ class loginController extends Controller
         //
     }
 
-    public function getCity(Request $request)
-    {
-        $data['cities'] = City::where("state_id",$request->state_id)
-                    ->get(["name","id"]);
-        return response()->json($data);
-    }
+  
 }

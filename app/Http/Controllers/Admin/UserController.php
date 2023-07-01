@@ -7,7 +7,9 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\State;
 use Illuminate\Support\Carbon;
-
+use PDF;
+use App\Models\CertificateRecord;
+use Illuminate\Support\Facades\Crypt;
 class UserController extends Controller
 {
     /**
@@ -194,5 +196,18 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+     public function createPDF($id) {
+
+        $decryptedID = Crypt::decryptString($id);
+        $data = CertificateRecord::find($decryptedID);
+
+        return view('frontend.certificate.index', compact('data'));
+        
+        // // view()->share('data',$data);
+        // PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);    
+        // $pdf = PDF::loadView('frontend.certificate.index', compact('data'));
+        // return $pdf->download('pdf_file.pdf');
     }
 }
