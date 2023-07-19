@@ -30,6 +30,10 @@ return new class extends Migration
             $table->string('signature')->nullable();
             $table->string('course_id')->nullable();
             $table->bigInteger('register_no')->nullable();
+            $table->string('board_name')->nullable();
+            $table->string('passing_year')->nullable();
+            $table->string('percentage')->nullable();
+            $table->string('trx_no');  
             $table->renameColumn('name', 'f_name');
         });
     }

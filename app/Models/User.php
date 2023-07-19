@@ -44,7 +44,12 @@ class User extends Authenticatable
         'role',
         'status',
         'profile_pic',
-        'branch_id'
+        'branch_id',
+        'verify_status',
+        'board_name',
+        'passing_year',
+        'percentage',
+        'board_name','passing_year','percentage','exam_date','trx_no'
     ];
 
     /**
@@ -74,24 +79,17 @@ class User extends Authenticatable
         return date('d-m-Y', strtotime($value));
     }
 
-    public static function generateSerialNumber()
+    public static function generateSerialNumber($branch_id)
     {
-        // $lastRecord = self::orderBy('id', 'desc')->first();
-        // $lastSerialNumber = $lastRecord ? $lastRecord->register_no : null;
-        // $serialNumber = $prefix . str_pad($lastSerialNumber + 1, 3, '0', STR_PAD_LEFT);
-        // return $serialNumber;
-        // $latest = App\Order::latest()->first();
-        
+       
         $get_student_role_id = Role::select('id')->where('slug','=','user')->first();
-        $lastRecord = self::where('role','=',$get_student_role_id->id)->orderBy('id', 'desc')->first();
+        $lastRecord = self::where('role','=',$get_student_role_id->id)->where('branch_id',$branch_id)->orderBy('id', 'desc')->first();
 
         if (! $lastRecord) {
-            return 'ITCAREER0001';
+            return '0001';
         }
-
         $string = preg_replace("/[^0-9\.]/", '', $lastRecord->register_no);
-
-        return 'ITCAREER' . sprintf('%04d', $string+1);
+        return sprintf('%04d', $string+1);
     }
 
     public function stateName() {
@@ -105,6 +103,27 @@ class User extends Authenticatable
 
     public function branchs() {
         return $this->belongsTo(Branch::class,'branch_id','id'); // don't forget to add your full namespace
+    }
+
+    public function roles()
+    {
+        return $this->belongsTo('App\Models\Role','role','id');
+    }
+
+    public function courseName() {
+        return $this->belongsTo(Course::class,'course_id','id'); // don't forget to add your full namespace
+    }
+
+    public function branchName() {
+        return $this->belongsTo(Branch::class,'branch_id','id'); // don't forget to add your full namespace
+    }
+
+    public function verifyInfo() {
+        return $this->hasOne(StudentVerify::class,'student_id'); // don't forget to add your full namespace
+    }
+
+    public function examInfo() {
+        return $this->hasOne(StudentExam::class,'student_id'); // don't forget to add your full namespace
     }
 
 

@@ -225,9 +225,15 @@
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Select Course</label>
                                             <select class="custom-select" name="course_id">
-                                                 <option value="0">Select Course</option>
-                                                 <option value="ccc">CCC</option>
+                                                 
+                                                <option value="0">Select Course</option>
+
+                                                @foreach ($courses as $course)
+                                                    <option value="{{ $course->id }}">{{ $course->name }}</option>
+                                                @endforeach
+
                                             </select>
+                                            
                                             @if ($errors->has('course_id'))
                                                 <span class="text-danger">{{ $errors->first('course_id') }}</span>
                                             @endif

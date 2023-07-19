@@ -53,7 +53,7 @@
                             1 : !s("\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !s(
                                 "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
                                 "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"
-                                );
+                            );
                     case "emoji":
                         return !s("\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff",
                             "\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")
@@ -1531,6 +1531,1451 @@
             line-height: 1.6;
         }
     </style>
+
+    <style id="ct-main-styles-inline-css">
+        [data-header*="type-1"] .site-header [data-row="bottom"] {
+            --height: 80px;
+            --background-image: none;
+            --background-color: var(--paletteColor5);
+            --borderTop: none;
+            --borderBottom: none;
+            --box-shadow: none;
+        }
+
+        [data-header*="type-1"] .site-header [data-row="bottom"]>div {
+            --borderTop: none;
+            --borderBottom: none;
+        }
+
+        [data-header*="type-1"] .site-header [data-sticky*="yes"] [data-row="bottom"] {
+            --background-image: none;
+            --background-color: var(--paletteColor5);
+            --borderTop: none;
+            --borderBottom: none;
+            --box-shadow: 0px 10px 20px rgba(62, 60, 60, 0.2);
+        }
+
+        [data-header*="type-1"] .site-header [data-sticky*="yes"] [data-row="bottom"]>div {
+            --borderTop: none;
+            --borderBottom: none;
+        }
+
+        [data-header*="type-1"] .site-header [data-id="button"] {
+            --buttonMinWidth: 164px;
+            --buttonInitialColor: #2e3192;
+            --buttonHoverColor: #ed1c24;
+            --headerButtonBorderColor: #2e3192;
+            --headerButtonBorderHoverColor: #ed1c24;
+            --buttonBorderRadius: 30px;
+            --headerCtaPadding: 10px 25px;
+        }
+
+        [data-header*="type-1"] .site-header [data-id="button"] .cb__button {
+            --buttonTextInitialColor: var(--paletteColor5);
+            --buttonTextHoverColor: var(--paletteColor5);
+        }
+
+        [data-header*="type-1"] .site-header [data-id="button"] .cb__button-ghost {
+            --buttonTextInitialColor: var(--paletteColor3);
+            --buttonTextHoverColor: var(--paletteColor2);
+        }
+
+        [data-header*="type-1"] .site-header [data-id="logo"] .site-logo-container {
+            --LogoMaxWidth: 54px;
+        }
+
+        [data-header*="type-1"] .site-header [data-id="logo"] .site-title {
+            --fontWeight: 700;
+            --textTransform: none;
+            --textDecoration: none;
+            --fontSize: 24px;
+            --lineHeight: 1.5;
+            --letterSpacing: 0em;
+            --linkInitialColor: var(--paletteColor2);
+            --linkHoverColor: #ed1c24;
+        }
+
+        [data-header*="type-1"] .site-header [data-sticky*="yes"] [data-id="logo"] .site-title {
+            --linkInitialColor: var(--paletteColor2);
+            --linkHoverColor: #ed1c24;
+        }
+
+        [data-header*="type-1"] .site-header [data-id="logo"] {
+            --margin: 0 !important;
+        }
+
+        [data-header*="type-1"] .site-header [data-id="menu"] {
+            --menu-items-spacing: 25px;
+            --menu-indicator-active-color: var(--paletteColor3);
+            --activeIndicatorbackgroundColor: var(--paletteColor7);
+            --margin: 0 25px !important;
+        }
+
+        [data-header*="type-1"] .site-header [data-id="menu"]>ul>li>a {
+            --menu-item-height: 100%;
+            --fontWeight: 500;
+            --textTransform: normal;
+            --fontSize: 18px;
+            --lineHeight: 2.25;
+            --linkInitialColor: #2e3192;
+            --linkHoverColor: #ed1c24;
+            --colorHoverType3: var(--paletteColor5);
+        }
+
+        [data-header*="type-1"] .site-header [data-id="menu"] .sub-menu {
+            --dropdown-top-offset: 45px;
+            --dropdown-width: 251px;
+            --dropdown-items-spacing: 10px;
+            --fontWeight: 400;
+            --fontSize: 16px;
+            --linkInitialColor: #000000;
+            --linkHoverColor: #ed1c24;
+            --dropdown-divider: 1px dashed var(--paletteColor6);
+            --background-color: var(--paletteColor5);
+            --background-hover-color: var(--paletteColor7);
+            --box-shadow: 0px 10px 20px rgba(41, 51, 61, 0.1);
+            --border-radius: 0px 0px 2px 2px;
+        }
+
+        [data-header*="type-1"] .site-header [data-row="middle"] {
+            --height: 136px;
+            --background-image: none;
+            --background-color: var(--paletteColor5);
+            --borderTop: none;
+            --borderBottom: 1px solid rgba(44, 62, 80, 0.2);
+            --box-shadow: none;
+        }
+
+        [data-header*="type-1"] .site-header [data-row="middle"]>div {
+            --borderTop: none;
+            --borderBottom: none;
+        }
+
+        [data-header*="type-1"] .site-header [data-sticky*="yes"] [data-row="middle"] {
+            --background-image: none;
+            --background-color: var(--paletteColor5);
+            --borderTop: none;
+            --borderBottom: none;
+            --box-shadow: none;
+        }
+
+        [data-header*="type-1"] .site-header [data-sticky*="yes"] [data-row="middle"]>div {
+            --borderTop: none;
+            --borderBottom: none;
+        }
+
+        [data-header*="type-1"] [data-id="mobile-menu"] {
+            --fontWeight: 400;
+            --fontSize: 30px;
+            --linkInitialColor: #2e3192;
+            --linkHoverColor: #ed1c23;
+            --mobile_menu_child_size: 14px;
+            --padding: 5px 0;
+        }
+
+        [data-header*="type-1"] #offcanvas>section {
+            --background-image: none;
+            --background-color: var(--paletteColor5);
+        }
+
+        [data-header*="type-1"] #offcanvas {
+            --background-image: none;
+            --background-color: rgba(255, 255, 255, 0);
+            --side-panel-width: 500px;
+        }
+
+        [data-header*="type-1"] [data-behaviour*="side"] {
+            --box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.35);
+        }
+
+        [data-header*="type-1"] #offcanvas .close-button {
+            --closeButtonColor: var(--paletteColor3);
+            --closeButtonHoverColor: var(--paletteColor2);
+            --closeButtonBackground: none;
+        }
+
+        [data-header*="type-1"] .site-header [data-id="text"] {
+            --maxWidth: 100%;
+            --fontWeight: 600;
+            --textDecoration: none;
+            --fontSize: 18px;
+            --lineHeight: 1.5;
+            --color: #ffffff;
+            --linkInitialColor: #2e3192;
+            --linkHoverColor: #ed1c24;
+        }
+
+        [data-header*="type-1"] .site-header [data-row="top"] {
+            --height: 300px;
+            --background-position: 50% 0%;
+            --background-size: contain;
+            --background-attachment: scroll;
+            --background-repeat: no-repeat;
+            --background-image: url(wp-content/uploads/2023/05/2.png);
+            --background-color: var(--paletteColor5);
+            --borderTop: none;
+            --borderBottom: none;
+            --box-shadow: none;
+        }
+
+        [data-header*="type-1"] .site-header [data-row="top"]>div {
+            --borderTop: none;
+            --borderBottom: none;
+        }
+
+        [data-header*="type-1"] .site-header [data-sticky*="yes"] [data-row="top"] {
+            --background-image: none;
+            --background-color: #f9f9f9;
+            --borderTop: none;
+            --borderBottom: none;
+            --box-shadow: none;
+        }
+
+        [data-header*="type-1"] .site-header [data-sticky*="yes"] [data-row="top"]>div {
+            --borderTop: none;
+            --borderBottom: none;
+        }
+
+        [data-header*="type-1"] [data-id="trigger"] {
+            --linkInitialColor: #ed1c24;
+            --linkHoverColor: #2e3192;
+            --secondColor: var(--paletteColor6);
+            --secondColorHover: var(--paletteColor6);
+            --fontWeight: 400;
+            --fontSize: 18px;
+        }
+
+        [data-header*="type-1"] [data-sticky*="yes"] [data-id="trigger"] {
+            --linkInitialColor: #ed1c24;
+            --linkHoverColor: #2e3192;
+        }
+
+        [data-header*="type-1"] {
+            --headerStickyHeight: 80px;
+        }
+
+        [data-footer*="type-1"] footer.cb__footer [data-row="bottom"]>div {
+            --container-spacing: 20px;
+            --items-gap: 60px;
+            --border-top: 1px solid rgba(255, 255, 255, 0.25);
+            --grid-template-colummns: repeat(2, 1fr);
+        }
+
+        [data-footer*="type-1"] footer.cb__footer [data-row="bottom"] .widget-title {
+            --textTransform: uppercase;
+            --fontSize: 16px;
+            --lineHeight: 1.75;
+            --letterSpacing: 0.4px;
+            --headingColor: var(--paletteColor5);
+        }
+
+        [data-footer*="type-1"] footer.cb__footer [data-row="bottom"] .widget>*:not(.widget-title) {
+            --color: var(--paletteColor5);
+            --headingColor: var(--paletteColor5);
+        }
+
+        [data-footer*="type-1"] footer.cb__footer [data-row="bottom"] .widget {
+            --linkInitialColor: var(--paletteColor5);
+            --linkHoverColor: var(--paletteColor5);
+        }
+
+        [data-footer*="type-1"] footer.cb__footer [data-row="bottom"] [data-divider="columns"] {
+            --border: none;
+        }
+
+        [data-footer*="type-1"] footer.cb__footer [data-row="bottom"] {
+            --border-top: none;
+            --background-image: none;
+            --background-color: #2e3192;
+        }
+
+        [data-footer*="type-1"] [data-id="copyright"] {
+            --fontWeight: 400;
+            --fontSize: 16px;
+            --lineHeight: 1.875;
+            --color: var(--paletteColor5);
+            --linkInitialColor: var(--paletteColor5);
+            --linkHoverColor: #00aeef;
+        }
+
+        [data-footer*="type-1"] [data-column="copyright"] {
+            --horizontal-alignment: left;
+            --vertical-alignment: flex-start;
+        }
+
+        [data-footer*="type-1"] [data-id="socials"].cb__footer-socials {
+            --icon-size: 20px;
+            --spacing: 30px;
+            --margin: 20px 0 0 0 !important;
+        }
+
+        [data-footer*="type-1"] [data-id="socials"].cb__footer-socials [data-color="custom"] {
+            --icon-color: var(--paletteColor5);
+            --icon-hover-color: var(--paletteColor3);
+            --background-color: var(--paletteColor7);
+            --background-hover-color: var(--paletteColor6);
+        }
+
+        [data-footer*="type-1"] [data-id="socials"].cb__footer-socials .cb__label {
+            --visibility: none;
+        }
+
+        [data-footer*="type-1"] footer.cb__footer [data-row="top"]>div {
+            --container-spacing: 30px;
+            --items-gap: 60px;
+            --grid-template-colummns: repeat(3, 1fr);
+        }
+
+        [data-footer*="type-1"] footer.cb__footer [data-row="top"] .widget-title {
+            --textTransform: uppercase;
+            --fontSize: 16px;
+            --lineHeight: 1.75;
+            --letterSpacing: 0.4px;
+            --headingColor: var(--paletteColor5);
+        }
+
+        [data-footer*="type-1"] footer.cb__footer [data-row="top"] .widget>*:not(.widget-title) {
+            --color: var(--paletteColor5);
+            --headingColor: var(--paletteColor5);
+        }
+
+        [data-footer*="type-1"] footer.cb__footer [data-row="top"] .widget {
+            --linkInitialColor: var(--paletteColor5);
+            --linkHoverColor: var(--paletteColor5);
+        }
+
+        [data-footer*="type-1"] footer.cb__footer [data-row="top"] [data-divider="columns"] {
+            --border: none;
+        }
+
+        [data-footer*="type-1"] footer.cb__footer [data-row="top"] {
+            --background-image: none;
+            --background-color: #2a3589;
+        }
+
+        :root {
+            --fontFamily: 'Montserrat', Sans-Serif;
+            --fontWeight: 400;
+            --fontSize: 18px;
+            --lineHeight: 1.666666666666667;
+            --letterSpacing: 0;
+            --btnFontWeight: 400;
+            --btnFontSize: 18px;
+            --btnLineHeight: 1.2;
+            --blogCategoryDividerInitialColorFirst: var(--paletteColor1);
+            --blogCategoryDividerHoverColorFirst: var(--paletteColor3);
+            --blogHeadingFontSize: 28px;
+            --blogDividerMarginFirst: 0 0 20px 0;
+            --formBorderInitialColor: #e0e5eb;
+            --formBorderFocusColor: var(--paletteColor1);
+            --formBorderSize: 1px;
+            --radioCheckboxInitialColor: #d5d8de;
+            --radioCheckboxAccentColor: var(--paletteColor1);
+            --primaryColor: var(--paletteColor1);
+            --baseColor: var(--paletteColor7);
+            --genheadingColor: var(--paletteColor2);
+            --genLinkColor: #2e3192;
+            --genLinkHoverColor: #ed1c24;
+            --textSelectionColor: var(--paletteColor5);
+            --textSelectionHoverColor: #2e3192;
+            --genborderColor: var(--paletteColor6);
+            --btnTextColor: var(--paletteColor5);
+            --btnTextHoverColor: #ed1c24;
+            --btnBgColor: #ed1c24;
+            --btnBgHoverColor: var(--paletteColor5);
+            --btnBorderColor: #ed1c24;
+            --btnBorderHoverColor: #ed1c24;
+            --paletteColor1: #516066;
+            --paletteColor2: #171d1f;
+            --paletteColor3: #ff6b42;
+            --paletteColor4: #0d6c7f;
+            --paletteColor5: #ffffff;
+            --paletteColor6: #d7dfe0;
+            --paletteColor7: #f5f9fa;
+            --paletteColor8: #478f9e;
+            --color: var(--paletteColor2);
+            --linkInitialColor: var(--paletteColor1);
+            --linkHoverColor: var(--paletteColor2);
+            --selectionTextColor: var(--paletteColor5);
+            --selectionBackgroundColor: var(--paletteColor1);
+            --border-color: rgba(224, 229, 235, 0.9);
+            --headingColor: var(--paletteColor4);
+            --contentSpacing: 1.5em;
+            --bottonRoundness: 30px;
+            --buttonPadding: 14px 29px;
+            --buttonMinHeight: 45px;
+            --buttonBorderRadius: 3px;
+            --buttonTextInitialColor: var(--paletteColor5);
+            --buttonTextHoverColor: var(--paletteColor5);
+            --buttonInitialColor: var(--paletteColor3);
+            --buttonHoverColor: var(--paletteColor2);
+            --container-max-width: 1290px;
+            --content-vertical-spacing: 60px;
+            --narrow-container-max-width: 750px;
+            --wide-offset: 130px;
+            --sidebarWidth: 27%;
+            --sidebarWidthNoUnit: 27;
+            --sidebarGap: 4%;
+            --sidebarOffset: 50px;
+            --contentSidebarWidth: 28%;
+            --sidebarWidgetSpacing: 64px;
+            --widgetsContentAreaSpacing: 0 0 20px 20px;
+            --breadcrumbsColor: rgba(41, 41, 41, 0.30);
+            --breadcrumbsCurrentColor: var(--paletteColor1);
+            --breadcrumbsSeparatorColor: rgba(41, 41, 41, 0.30);
+            --linkHighlightColor: var(--paletteColor3);
+            --linkHighlightHoverColor: var(--paletteColor1);
+            --linkHighlightBackgroundColor: var(--paletteColor6);
+            --linkHighlightBackgroundHoverColor: var(--paletteColor3);
+            --authorFontColor: var(--paletteColor2);
+            --searchFontColor: var(--paletteColor2);
+            --archiveFontColor: var(--paletteColor2);
+            --blogFontColor: var(--paletteColor2);
+            --titleColor: var(--paletteColor1);
+            --relatedPostCategoryDividerInitialColor: var(--paletteColor1);
+            --relatedPostCategoryDividerHoverColor: var(--paletteColor3);
+            --captionOverlayColor: var(--paletteColor1);
+            --captionColor: var(--paletteColor8);
+            --containerWidth: 1200px;
+            --containerContentMaxWidth: 728px;
+            --containerVerticalMargin: 80px;
+        }
+
+        h1,
+        .block-editor-page .editor-styles-wrapper h1,
+        .block-editor-page .editor-post-title__block .editor-post-title__input {
+            --fontWeight: 700;
+            --fontSize: 48px;
+            --lineHeight: 1.3;
+            --letterSpacing: -0.02em;
+        }
+
+        h2 {
+            --fontWeight: 700;
+            --fontSize: 48px;
+            --lineHeight: 1.333333333333333;
+            --letterSpacing: -0.02em;
+        }
+
+        h3 {
+            --fontWeight: 700;
+            --fontSize: 40px;
+            --lineHeight: 1.4;
+            --letterSpacing: -0.02em;
+        }
+
+        h4 {
+            --fontWeight: 700;
+            --fontSize: 36px;
+            --lineHeight: 1.33333333333;
+            --letterSpacing: -0.02em;
+        }
+
+        h5 {
+            --fontWeight: 700;
+            --fontSize: 24px;
+            --lineHeight: 1.5;
+            --letterSpacing: -0.02em;
+        }
+
+        h6 {
+            --fontWeight: 700;
+            --fontSize: 18px;
+            --lineHeight: 1.5;
+        }
+
+        .wp-block-quote.is-style-large p,
+        .wp-block-pullquote p,
+        .rt-quote-widget blockquote {
+            --fontFamily: 'Georgia', Sans-Serif;
+            --fontWeight: 600;
+            --fontSize: 25px;
+        }
+
+        code,
+        kbd,
+        samp,
+        pre {
+            --fontFamily: 'monospace', Sans-Serif;
+            --fontWeight: 400;
+            --fontSize: 16px;
+        }
+
+        .rt-sidebar .widget-title {
+            --fontSize: 18px;
+        }
+
+        .entry-summary>.product_title {
+            --fontSize: 30px;
+        }
+
+        .entry-summary .price {
+            --fontWeight: 700;
+            --fontSize: 20px;
+        }
+
+        .rishi-breadcrumb-main-wrap .rishi-breadcrumbs {
+            --fontFamily: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+            --fontWeight: 500;
+            --fontSize: 14px;
+        }
+
+        .woocommerce-store-notice.demo_store {
+            --fontWeight: 400;
+            --fontSize: 18px;
+        }
+
+        .woocommerce-page .archive-title-wrapper .tagged-in-wrapper h1 {
+            --fontWeight: 700;
+            --fontSize: 40px;
+            --lineHeight: 1.75;
+        }
+
+        .cb__menu-trigger .cb__label {
+            --fontWeight: 400;
+            --fontSize: 18px;
+        }
+
+        .rt-featured-image .rt-caption-wrap {
+            --fontWeight: 400;
+            --fontSize: 14px;
+            --lineHeight: 1.5;
+            --captionPadding: 10px;
+        }
+
+        body {
+            --background-image: none;
+            --background-color: var(--paletteColor5);
+        }
+
+        .entry-header .page-title {
+            --fontSize: 32px;
+        }
+
+        .entry-header .entry-meta {
+            --fontWeight: 600;
+            --textTransform: uppercase;
+            --fontSize: 12px;
+            --lineHeight: 1.5;
+        }
+
+        .entry-header .rt-breadcrumbs {
+            --fontWeight: 600;
+            --textTransform: uppercase;
+            --fontSize: 12px;
+        }
+
+        .hero-section[data-type="type-1"] {
+            --margin-bottom: 50px;
+        }
+
+        .page .main-content-wrapper .entry-header {
+            --margin-bottom: 50px;
+        }
+
+        .cb__pagination {
+            --spacing: 80px;
+        }
+
+        .cb__pagination[data-divider] {
+            --border: none;
+        }
+
+        [data-pagination="simple"] {
+            --colorActive: #ffffff;
+        }
+
+        [data-prefix="blog"] .entry-card .entry-title {
+            --fontSize: 20px;
+            --lineHeight: 1.3;
+        }
+
+        [data-prefix="blog"] .entry-excerpt {
+            --fontSize: 16px;
+        }
+
+        [data-prefix="blog"] .entry-card .entry-meta {
+            --fontWeight: 600;
+            --textTransform: uppercase;
+            --fontSize: 12px;
+        }
+
+        [data-prefix="blog"] [data-cards="boxed"] .entry-card {
+            --cardBackground: #ffffff;
+            --border: none;
+            --cardSpacing: 35px;
+            --box-shadow: 0px 12px 18px -6px rgba(34, 56, 101, 0.04);
+        }
+
+        [data-prefix="blog"] .entry-card {
+            --entry-divider: 1px solid rgba(224, 229, 235, 0.8);
+        }
+
+        [data-prefix="blog"] [data-cards="simple"] .entry-card {
+            --border: 1px dashed rgba(224, 229, 235, 0.8);
+        }
+
+        [data-prefix="categories"] .entry-card .entry-title {
+            --fontSize: 20px;
+            --lineHeight: 1.3;
+        }
+
+        [data-prefix="categories"] .entry-excerpt {
+            --fontSize: 16px;
+        }
+
+        [data-prefix="categories"] .entry-card .entry-meta {
+            --fontWeight: 600;
+            --textTransform: uppercase;
+            --fontSize: 12px;
+        }
+
+        [data-prefix="categories"] [data-cards="boxed"] .entry-card {
+            --cardBackground: #ffffff;
+            --border: none;
+            --cardSpacing: 35px;
+            --box-shadow: 0px 12px 18px -6px rgba(34, 56, 101, 0.04);
+        }
+
+        [data-prefix="categories"] .entry-card {
+            --entry-divider: 1px solid rgba(224, 229, 235, 0.8);
+        }
+
+        [data-prefix="categories"] [data-cards="simple"] .entry-card {
+            --border: 1px dashed rgba(224, 229, 235, 0.8);
+        }
+
+        [data-prefix="author"] .entry-card .entry-title {
+            --fontSize: 20px;
+            --lineHeight: 1.3;
+        }
+
+        [data-prefix="author"] .entry-excerpt {
+            --fontSize: 16px;
+        }
+
+        [data-prefix="author"] .entry-card .entry-meta {
+            --fontWeight: 600;
+            --textTransform: uppercase;
+            --fontSize: 12px;
+        }
+
+        [data-prefix="author"] [data-cards="boxed"] .entry-card {
+            --cardBackground: #ffffff;
+            --border: none;
+            --cardSpacing: 35px;
+            --box-shadow: 0px 12px 18px -6px rgba(34, 56, 101, 0.04);
+        }
+
+        [data-prefix="author"] .entry-card {
+            --entry-divider: 1px solid rgba(224, 229, 235, 0.8);
+        }
+
+        [data-prefix="author"] [data-cards="simple"] .entry-card {
+            --border: 1px dashed rgba(224, 229, 235, 0.8);
+        }
+
+        [data-prefix="search"] .entry-card .entry-title {
+            --fontSize: 20px;
+            --lineHeight: 1.3;
+        }
+
+        [data-prefix="search"] .entry-excerpt {
+            --fontSize: 16px;
+        }
+
+        [data-prefix="search"] .entry-card .entry-meta {
+            --fontWeight: 600;
+            --textTransform: uppercase;
+            --fontSize: 12px;
+        }
+
+        [data-prefix="search"] [data-cards="boxed"] .entry-card {
+            --cardBackground: #ffffff;
+            --border: none;
+            --cardSpacing: 35px;
+            --box-shadow: 0px 12px 18px -6px rgba(34, 56, 101, 0.04);
+        }
+
+        [data-prefix="search"] .entry-card {
+            --entry-divider: 1px solid rgba(224, 229, 235, 0.8);
+        }
+
+        [data-prefix="search"] [data-cards="simple"] .entry-card {
+            --border: 1px dashed rgba(224, 229, 235, 0.8);
+        }
+
+        form textarea {
+            --formInputHeight: 170px;
+        }
+
+        #secondary {
+            --widgetsHeadingColor: var(--sidebarWidgetsTitleColor);
+            --widgetsFontSize: 18px;
+        }
+
+        .widget-area>* {
+            --widgetsLinkColor: var(--paletteColor1);
+        }
+
+        .widget-area {
+            --widgetsLinkHoverColor: #ed1c24;
+            --sidebarBackgroundColor: var(--paletteColor5);
+            --border: none;
+            --border: 1px solid var(--paletteColor6);
+            --sidebar-widgets-spacing: 60px;
+            --sidebarInnerSpacing: 35px;
+            --box-shadow: 0px 12px 18px -6px rgba(34, 56, 101, 0.04);
+        }
+
+        .widget>*:not(.widget-title) {
+            --headingColor: var(--paletteColor2);
+        }
+
+        .rishi-breadcrumb-main-wrap {
+            --alignment: left;
+            --padding: 0px 0px 10px 0px;
+        }
+
+        .page .entry-header {
+            --alignment: left;
+            --margin-bottom: 50px;
+        }
+
+        .box-layout.page .main-content-wrapper,
+        .content-box-layout.page .main-content-wrapper {
+            --background-image: none;
+            --background-color: var(--paletteColor5);
+            --padding: 40px;
+            --box-radius: 3px;
+        }
+
+        .box-layout.single .main-content-wrapper,
+        .content-box-layout.single .main-content-wrapper {
+            --background-image: none;
+            --background-color: #ffffff;
+            --padding: 40px;
+            --box-radius: 3px;
+        }
+
+        .archive.author .site-content .archive-title-wrapper {
+            --width: 142px;
+            --margin: 78px;
+            --alignment: left;
+            --authorMargin: 30px;
+            --background-image: none;
+            --background-color: var(--paletteColor7);
+        }
+
+        .search .site-content .archive-title-wrapper {
+            --alignment: left;
+            --margin: 78px;
+            --searchMargin: 30px;
+            --background-image: none;
+            --background-color: var(--paletteColor7);
+        }
+
+        .archive .site-content .archive-title-wrapper {
+            --margin: 60px;
+            --alignment: left;
+            --archiveMargin: 30px;
+            --background-image: none;
+            --background-color: var(--paletteColor7);
+        }
+
+        .blog .site-content .archive-title-wrapper {
+            --background-image: none;
+            --background-color: var(--paletteColor7);
+            --alignment: left;
+            --margin: 20px;
+        }
+
+        .cb__share-box {
+            --icon-size: 15px;
+            --iconSpacing: 0px 10px 10px 0px;
+            --alignment: left;
+            --fontWeight: 500;
+            --fontSize: 14px;
+            --lineHeight: 1.2;
+        }
+
+        .cb__share-box[data-location="top"] {
+            --margin: 10px;
+        }
+
+        .cb__share-box[data-location="bottom"] {
+            --margin: 10px;
+        }
+
+        .cb__share-box[data-sticky="yes"] {
+            --topOffset: 150px;
+            --sideOffset: 15px;
+        }
+
+        [data-prefix="single_blog_post"] .post-navigation {
+            --margin: 80px;
+            --linkInitialColor: var(--color);
+        }
+
+        [data-prefix="single_blog_post"] .rt-related-posts-container {
+            --padding: 70px;
+            --background-image: none;
+            --background-color: #eff1f5;
+            --visibility: block;
+        }
+
+        [data-prefix="single_blog_post"] .rt-related-posts {
+            --visibility: grid;
+        }
+
+        [data-prefix="single_blog_post"] .related-entry-title {
+            --linkInitialColor: var(--color);
+        }
+
+        .to_top {
+            --topButtonIconColorDefault: var(--paletteColor3);
+            --topButtonIconColorHover: var(--paletteColor5);
+            --topButtonShapeBackgroundDefault: rgba(41, 41, 41, 0);
+            --topButtonShapeBackgroundHover: var(--paletteColor3);
+            --topButtonBorderDefaultColor: var(--paletteColor3);
+            --topButtonBorderHoverColor: var(--paletteColor3);
+            --topButtonSize: 12px;
+            --topButtonOffset: 25px;
+            --sideButtonOffset: 25px;
+            --top-button-border: 1px;
+            --top-button-border-radius: 50px;
+            --top_button_padding: 10px;
+        }
+
+        .rishi-container[data-strech="full"] {
+            --streched-padding: 40px;
+        }
+    </style>
+    <style id="ct-main-styles-tablet-inline-css" media="(max-width: 999.98px)">
+        [data-header*="type-1"] .site-header [data-row="middle"] {
+            --height: 70px;
+        }
+
+        [data-header*="type-1"] [data-id="mobile-menu"] {
+            --fontSize: 16px;
+        }
+
+        [data-header*="type-1"] #offcanvas {
+            --side-panel-width: 65vw;
+        }
+
+        [data-header*="type-1"] .site-header [data-row="top"] {
+            --height: 180px;
+        }
+
+        [data-footer*="type-1"] footer.cb__footer [data-row="bottom"]>div {
+            --container-spacing: 25px;
+            --items-gap: 40px;
+            --grid-template-colummns: initial;
+        }
+
+        [data-footer*="type-1"] [data-column="copyright"] {
+            --horizontal-alignment: center;
+        }
+
+        [data-footer*="type-1"] footer.cb__footer [data-row="top"]>div {
+            --items-gap: 40px;
+            --grid-template-colummns: initial;
+        }
+
+        h1,
+        .block-editor-page .editor-styles-wrapper h1,
+        .block-editor-page .editor-post-title__block .editor-post-title__input {
+            --lineHeight: 1.33333;
+        }
+
+        h2 {
+            --fontSize: 40px;
+        }
+
+        h3 {
+            --fontSize: 33px;
+        }
+
+        h4 {
+            --fontSize: 30px;
+        }
+
+        .entry-header .page-title {
+            --fontSize: 30px;
+        }
+
+        .hero-section[data-type="type-1"] {
+            --margin-bottom: 30px;
+        }
+
+        .page .main-content-wrapper .entry-header {
+            --margin-bottom: 30px;
+        }
+
+        .cb__pagination {
+            --spacing: 60px;
+        }
+
+        :root {
+            --sidebarWidgetSpacing: 50px;
+            --containerWidth: 992px;
+            --containerContentMaxWidth: 500px;
+            --containerVerticalMargin: 40px;
+        }
+
+        #secondary {
+            --widgetsFontSize: 16px;
+        }
+
+        .widget-area {
+            --sidebar-widgets-spacing: 40px;
+        }
+
+        .page .entry-header {
+            --margin-bottom: 30px;
+        }
+
+        .box-layout.page .main-content-wrapper,
+        .content-box-layout.page .main-content-wrapper {
+            --padding: 15px;
+        }
+
+        .box-layout.single .main-content-wrapper,
+        .content-box-layout.single .main-content-wrapper {
+            --padding: 15px;
+        }
+
+        .archive.author .site-content .archive-title-wrapper {
+            --width: 100px;
+            --margin: 30px;
+        }
+
+        .search .site-content .archive-title-wrapper {
+            --margin: 30px;
+        }
+
+        .archive .site-content .archive-title-wrapper {
+            --margin: 30px;
+        }
+
+        [data-prefix="single_blog_post"] .post-navigation {
+            --margin: 60px;
+        }
+
+        [data-prefix="single_blog_post"] .rt-related-posts-container {
+            --padding: 50px;
+            --visibility: none;
+        }
+
+        [data-prefix="single_blog_post"] .rt-related-posts {
+            --visibility: none;
+        }
+
+        .rishi-container[data-strech="full"] {
+            --streched-padding: 30px;
+        }
+    </style>
+    <style id="ct-main-styles-mobile-inline-css" media="(max-width: 689.98px)">
+        [data-header*="type-1"] .site-header [data-row="bottom"] {
+            --height: 20px;
+        }
+
+        [data-header*="type-1"] #offcanvas {
+            --side-panel-width: 90vw;
+        }
+
+        [data-header*="type-1"] .site-header [data-row="top"] {
+            --height: 80px;
+        }
+
+        [data-header*="type-1"] {
+            --headerStickyHeight: 20px;
+        }
+
+        [data-footer*="type-1"] footer.cb__footer [data-row="bottom"]>div {
+            --container-spacing: 15px;
+            --items-gap: 8px;
+            --grid-template-colummns: initial;
+        }
+
+        [data-footer*="type-1"] footer.cb__footer [data-row="top"]>div {
+            --grid-template-colummns: initial;
+        }
+
+        h2 {
+            --fontSize: 35px;
+        }
+
+        h3 {
+            --fontSize: 30px;
+        }
+
+        h4 {
+            --fontSize: 36px;
+        }
+
+        .entry-header .page-title {
+            --fontSize: 25px;
+        }
+
+        .cb__pagination {
+            --spacing: 50px;
+        }
+
+        [data-prefix="blog"] .entry-card .entry-title {
+            --fontSize: 18px;
+        }
+
+        [data-prefix="blog"] [data-cards="boxed"] .entry-card {
+            --cardSpacing: 25px;
+        }
+
+        [data-prefix="categories"] .entry-card .entry-title {
+            --fontSize: 18px;
+        }
+
+        [data-prefix="categories"] [data-cards="boxed"] .entry-card {
+            --cardSpacing: 25px;
+        }
+
+        [data-prefix="author"] .entry-card .entry-title {
+            --fontSize: 18px;
+        }
+
+        [data-prefix="author"] [data-cards="boxed"] .entry-card {
+            --cardSpacing: 25px;
+        }
+
+        [data-prefix="search"] .entry-card .entry-title {
+            --fontSize: 18px;
+        }
+
+        [data-prefix="search"] [data-cards="boxed"] .entry-card {
+            --cardSpacing: 25px;
+        }
+
+        :root {
+            --content-vertical-spacing: 50px;
+            --sidebarWidgetSpacing: 30px;
+            --containerWidth: 420px;
+            --containerContentMaxWidth: 400px;
+        }
+
+        #secondary {
+            --widgetsFontSize: 14px;
+        }
+
+        .archive.author .site-content .archive-title-wrapper {
+            --width: 80px;
+        }
+
+        [data-prefix="single_blog_post"] .post-navigation {
+            --margin: 40px;
+        }
+
+        [data-prefix="single_blog_post"] .rt-related-posts-container {
+            --padding: 30px;
+        }
+
+        .rishi-container[data-strech="full"] {
+            --streched-padding: 15px;
+        }
+    </style>
+    <link rel='stylesheet' id='wp-block-library-css'
+        href='wp-includes/css/dist/block-library/style.min3781.css?ver=6.2.2' media='all' />
+    <link rel='stylesheet' id='classic-theme-styles-css' href='wp-includes/css/classic-themes.min3781.css?ver=6.2.2'
+        media='all' />
+    <style id='global-styles-inline-css'>
+        body {
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--pale-pink: #f78da7;
+            --wp--preset--color--vivid-red: #cf2e2e;
+            --wp--preset--color--luminous-vivid-orange: #ff6900;
+            --wp--preset--color--luminous-vivid-amber: #fcb900;
+            --wp--preset--color--light-green-cyan: #7bdcb5;
+            --wp--preset--color--vivid-green-cyan: #00d084;
+            --wp--preset--color--pale-cyan-blue: #8ed1fc;
+            --wp--preset--color--vivid-cyan-blue: #0693e3;
+            --wp--preset--color--vivid-purple: #9b51e0;
+            --wp--preset--color--palette-color-1: var(--paletteColor1, #516066);
+            --wp--preset--color--palette-color-2: var(--paletteColor2, #171d1f);
+            --wp--preset--color--palette-color-3: var(--paletteColor3, #ff6b42);
+            --wp--preset--color--palette-color-4: var(--paletteColor4, #0d6c7f);
+            --wp--preset--color--palette-color-5: var(--paletteColor5, #ffffff);
+            --wp--preset--color--palette-color-6: var(--paletteColor6, #d7dfe0);
+            --wp--preset--color--palette-color-7: var(--paletteColor7, #f5f9fa);
+            --wp--preset--color--palette-color-8: var(--paletteColor8, #478f9e);
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --wp--preset--gradient--juicy-peach: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+            --wp--preset--gradient--young-passion: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+            --wp--preset--gradient--true-sunset: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+            --wp--preset--gradient--morpheus-den: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+            --wp--preset--gradient--plum-plate: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --wp--preset--gradient--aqua-splash: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+            --wp--preset--gradient--love-kiss: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+            --wp--preset--gradient--new-retrowave: linear-gradient(to top, #3b41c5 0%, #a981bb 49%, #ffc8a9 100%);
+            --wp--preset--gradient--plum-bath: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+            --wp--preset--gradient--high-flight: linear-gradient(to right, #0acffe 0%, #495aff 100%);
+            --wp--preset--gradient--teen-party: linear-gradient(-225deg, #FF057C 0%, #8D0B93 50%, #321575 100%);
+            --wp--preset--gradient--fabled-sunset: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+            --wp--preset--gradient--arielle-smile: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+            --wp--preset--gradient--itmeo-branding: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+            --wp--preset--gradient--deep-blue: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+            --wp--preset--gradient--strong-bliss: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+            --wp--preset--gradient--sweet-period: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+            --wp--preset--gradient--purple-division: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
+            --wp--preset--gradient--cold-evening: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+            --wp--preset--gradient--mountain-rock: linear-gradient(to right, #868f96 0%, #596164 100%);
+            --wp--preset--gradient--desert-hump: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+            --wp--preset--gradient--ethernal-constance: linear-gradient(to top, #09203f 0%, #537895 100%);
+            --wp--preset--gradient--happy-memories: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+            --wp--preset--gradient--grown-early: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+            --wp--preset--gradient--morning-salad: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%);
+            --wp--preset--gradient--night-call: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
+            --wp--preset--gradient--mind-crawl: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+            --wp--preset--gradient--angel-care: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);
+            --wp--preset--gradient--juicy-cake: linear-gradient(to top, #e14fad 0%, #f9d423 100%);
+            --wp--preset--gradient--rich-metal: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+            --wp--preset--gradient--mole-hall: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
+            --wp--preset--gradient--cloudy-knoxville: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+            --wp--preset--gradient--soft-grass: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+            --wp--preset--gradient--saint-petersburg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            --wp--preset--gradient--everlasting-sky: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+            --wp--preset--gradient--kind-steel: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+            --wp--preset--gradient--over-sun: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
+            --wp--preset--gradient--premium-white: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+            --wp--preset--gradient--clean-mirror: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+            --wp--preset--gradient--wild-apple: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+            --wp--preset--gradient--snow-again: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+            --wp--preset--gradient--confident-cloud: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+            --wp--preset--gradient--glass-water: linear-gradient(to top, #dfe9f3 0%, white 100%);
+            --wp--preset--gradient--perfect-white: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+            --wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');
+            --wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');
+            --wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');
+            --wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');
+            --wp--preset--duotone--midnight: url('#wp-duotone-midnight');
+            --wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');
+            --wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');
+            --wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');
+            --wp--preset--font-size--small: 13px;
+            --wp--preset--font-size--medium: 20px;
+            --wp--preset--font-size--large: 36px;
+            --wp--preset--font-size--x-large: 42px;
+            --wp--preset--spacing--20: 0.44rem;
+            --wp--preset--spacing--30: 0.67rem;
+            --wp--preset--spacing--40: 1rem;
+            --wp--preset--spacing--50: 1.5rem;
+            --wp--preset--spacing--60: 2.25rem;
+            --wp--preset--spacing--70: 3.38rem;
+            --wp--preset--spacing--80: 5.06rem;
+            --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+            --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+            --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+        }
+
+        :where(.is-layout-flex) {
+            gap: 0.5em;
+        }
+
+        body .is-layout-flow>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        body .is-layout-flow>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        body .is-layout-flow>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        body .is-layout-constrained>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        body .is-layout-constrained>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+            max-width: var(--wp--style--global--content-size);
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained>.alignwide {
+            max-width: var(--wp--style--global--wide-size);
+        }
+
+        body .is-layout-flex {
+            display: flex;
+        }
+
+        body .is-layout-flex {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        body .is-layout-flex>* {
+            margin: 0;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        .has-black-color {
+            color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-color {
+            color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-color {
+            color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-color {
+            color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-color {
+            color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-color {
+            color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-color {
+            color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-color {
+            color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-color {
+            color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-color {
+            color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-color {
+            color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-color {
+            color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-background-color {
+            background-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-background-color {
+            background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-background-color {
+            background-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-background-color {
+            background-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-background-color {
+            background-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-background-color {
+            background-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-background-color {
+            background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-background-color {
+            background-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-border-color {
+            border-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-border-color {
+            border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-border-color {
+            border-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-border-color {
+            border-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-border-color {
+            border-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-border-color {
+            border-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-border-color {
+            border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-border-color {
+            border-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+            background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+        }
+
+        .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+            background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+        }
+
+        .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+        }
+
+        .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+            background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+        }
+
+        .has-cool-to-warm-spectrum-gradient-background {
+            background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+        }
+
+        .has-blush-light-purple-gradient-background {
+            background: var(--wp--preset--gradient--blush-light-purple) !important;
+        }
+
+        .has-blush-bordeaux-gradient-background {
+            background: var(--wp--preset--gradient--blush-bordeaux) !important;
+        }
+
+        .has-luminous-dusk-gradient-background {
+            background: var(--wp--preset--gradient--luminous-dusk) !important;
+        }
+
+        .has-pale-ocean-gradient-background {
+            background: var(--wp--preset--gradient--pale-ocean) !important;
+        }
+
+        .has-electric-grass-gradient-background {
+            background: var(--wp--preset--gradient--electric-grass) !important;
+        }
+
+        .has-midnight-gradient-background {
+            background: var(--wp--preset--gradient--midnight) !important;
+        }
+
+        .has-small-font-size {
+            font-size: var(--wp--preset--font-size--small) !important;
+        }
+
+        .has-medium-font-size {
+            font-size: var(--wp--preset--font-size--medium) !important;
+        }
+
+        .has-large-font-size {
+            font-size: var(--wp--preset--font-size--large) !important;
+        }
+
+        .has-x-large-font-size {
+            font-size: var(--wp--preset--font-size--x-large) !important;
+        }
+
+        .wp-block-navigation a:where(:not(.wp-element-button)) {
+            color: inherit;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        .wp-block-pullquote {
+            font-size: 1.5em;
+            line-height: 1.6;
+        }
+    </style>
     <link rel='stylesheet' id='dnd-upload-cf7-css'
         href='../../wp-content/plugins/drag-and-drop-multiple-file-upload-contact-form-7/assets/css/dnd-upload-cf7b3c5.css?ver=1.3.6.9'
         media='all' />
@@ -1807,6 +3252,16 @@
             max-width: 500px;
         }
     </style>
+    <style>
+        [data-header*="type-1"] .site-header [data-id="menu"]>ul>li>a:hover {
+            text-decoration: none !important;
+
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body
@@ -1955,7 +3410,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="rt-sticky-container">
+                <div class="">
                     <div data-sticky="shrink" style="margin-top: -76px;">
 
                         <div data-row="bottom" data-column-set="1">
@@ -1970,36 +3425,74 @@
 
                                             <ul id="menu-primary" class="menu">
                                                 <li id="menu-item-1117"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1117">
-                                                    <a href="/" aria-current="page"><B>HOME</B></a>
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home  menu-item-1117 ">
+                                                    <a href="/" aria-current="page">
+                                                        <b>HOME</b>
+                                                    </a>
                                                 </li>
                                                 <li id="menu-item-1124"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1124">
-                                                    <a href="{{ route('course.index') }}"><B>COURSES</B></a>
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1124 ">
+                                                    <a href="{{ route('course.index') }}">
+                                                        <b>COURSES</b>
+                                                    </a>
                                                 </li>
                                                 <li id="menu-item-3412"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-1117">
-                                                    <a href="{{ route('franchise.index') }}"><B>FRANCHISE</B></a>
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3412 animated-submenu current-menu-item page_item page-item-6 current_page_item">
+                                                    <a href="{{ route('franchise.index') }}">
+                                                        <b>FRANCHISE</b>
+                                                    </a>
                                                 </li>
                                                 <li id="menu-item-3413"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3413">
-                                                    <a href="{{ route('form.index') }}"><B>FORM</B></a>
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3413 animated-submenu page_item page-item-6">
+                                                    <a href="#">
+                                                        <b>STUDENT SECTION</b>
+                                                        <span class="child-indicator submenu-toggle">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="10"
+                                                                height="5" viewBox="0 0 10 5">
+                                                                <path id="Polygon_5" data-name="Polygon 5"
+                                                                    d="M5,0l5,5H0Z"
+                                                                    transform="translate(10 5) rotate(180)" />
+                                                            </svg>
+                                                        </span>
+                                                    </a>
+                                                    <ul class="sub-menu">
+                                                        <li id="menu-item-4250"
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4250">
+                                                            <a href="{{ route('form.index') }}">
+                                                                <b>STUDENT ENQUIRY</b>
+                                                            </a>
+                                                        </li>
+                                                        <li id="menu-item-4251"
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4251">
+                                                            <a href="{{ route('admission.index') }}">
+                                                                <b>STUDENT ADMISSION</b>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
                                                 </li>
                                                 <li id="menu-item-3414"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3414">
-                                                    <a href="{{ route('exam.index') }}"><B>EXAM</B></a>
+                                                    <a href="{{ route('exam.index') }}">
+                                                        <b>EXAM</b>
+                                                    </a>
                                                 </li>
                                                 <li id="menu-item-1125"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1125">
-                                                    <a href="{{ route('about.index') }}"><B>ABOUT US</B></a>
+                                                    <a href="{{ route('about.index') }}">
+                                                        <b>ABOUT US</b>
+                                                    </a>
                                                 </li>
                                                 <li id="menu-item-3416"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3416">
-                                                    <a href="{{ route('contact.index') }}"><B>CONTACT US</B></a>
+                                                    <a href="{{ route('contact.index') }}">
+                                                        <b>CONTACT US</b>
+                                                    </a>
                                                 </li>
                                                 <li id="menu-item-3417"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3417">
-                                                    <a href="{{ route('admin.home') }}"><B>LOGIN</B></a>
+                                                    <a href="{{ route('admin.home') }}">
+                                                        <b>LOGIN</b>
+                                                    </a>
                                                 </li>
                                             </ul>
                                         </nav>
@@ -2125,28 +3618,172 @@
             </div>
         </div>
         <div class="site-content reveal_none_desktop reveal_none_tablet reveal_none_mobile">
-            <div class="rishi-container" data-strech=none>
-                <div class="main-content-wrapper clear" data-v-spacing="top:bottom" data-page-spacing="top:bottom">
 
-                    <main id="primary" class="site-main">
-                        <div class="rishi-container-wrap">
-
-                            <article id="post-3403"
-                                class="post-3403 page type-page status-publish hentry rishi-post no-post-thumbnail">
-                                <header class="entry-header">
-                                    <h1 class="entry-title">FRANCHISE</h1>
-                                </header><!-- .entry-header -->
-
-
-                                <div class="entry-content" itemprop="text">
-                                </div><!-- .entry-content -->
-
-                            </article><!-- #post-## -->
+            <div class="container">
+                <form class="form-horizontal" style="margin-top: 30px;" action="{{ route('franchise.store') }}"
+                    method="post">
+                    @csrf
+                    
+                 <fieldset>
+                <legend><h2>Franchise Application Form</h2></legend>
+                
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="Enter Name" name="prop_name"
+                                value="{{ old('prop_name') }}">
+                            @if ($errors->has('prop_name'))
+                                <span class="text-danger">{{ $errors->first('prop_name') }}</span>
+                            @endif
                         </div>
-                    </main><!-- #main -->
+                    </div>
 
-                </div><!-- .main-content-wrapper -->
-            </div><!-- .rishi-container-->
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Father's Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="Enter Father's Name"
+                                name="f_name" value="{{ old('f_name') }}">
+                            @if ($errors->has('f_name'))
+                                <span class="text-danger">{{ $errors->first('f_name') }}</span>
+                            @endif
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Date of Birth</label>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" name="dob" value="{{ old('dob') }}">
+                            @if ($errors->has('dob'))
+                                <span class="text-danger">{{ $errors->first('dob') }}</span>
+                            @endif
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Phone number</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="phone"
+                                placeholder="Enter Phone number" value="{{ old('phone') }}">
+                            @if ($errors->has('phone'))
+                                <span class="text-danger">{{ $errors->first('phone') }}</span>
+                            @endif
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" name="email" placeholder="Enter Email"
+                                value="{{ old('email') }}">
+                            @if ($errors->has('email'))
+                                <span class="text-danger">{{ $errors->first('email') }}</span>
+                            @endif
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Center Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="center_name"
+                                placeholder="Enter Center Name" value="{{ old('center_name') }}">
+                            @if ($errors->has('center_name'))
+                                <span class="text-danger">{{ $errors->first('center_name') }}</span>
+                            @endif
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Center Address</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" name="center_address" placeholder="Enter Center address">{{ old('center_addresss') }}</textarea>
+                            @if ($errors->has('center_address'))
+                                <span class="text-danger">{{ $errors->first('center_address') }}</span>
+                            @endif
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Select State</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" id="state-dropdown" name="state">
+
+                                @foreach ($states as $state)
+                                    <option value="{{ $state->id }}">{{ $state->name }}</option>
+                                @endforeach
+
+                            </select>
+                            @if ($errors->has('state'))
+                                <span class="text-danger">{{ $errors->first('state') }}</span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Select City</label>
+
+                        <div class="col-sm-10">
+                            <select class="form-control" id="city-dropdown" name="city">
+                            </select>
+                            @if ($errors->has('city'))
+                                <span class="text-danger">{{ $errors->first('city') }}</span>
+                            @endif
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Pincode</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="pincode" placeholder="Enter pincode"
+                                value="{{ old('pincode') }}">
+                            @if ($errors->has('pincode'))
+                                <span class="text-danger">{{ $errors->first('pincode') }}</span>
+                            @endif
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Reference By</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="ref_by"
+                                placeholder="Enter Reference Name" value="{{ old('ref_by') }}">
+                            @if ($errors->has('ref_by'))
+                                <span class="text-danger">{{ $errors->first('ref_by') }}</span>
+                            @endif
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Enquire Purpose</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" name="enq_purpose" placeholder="Enter Enquire Purpose"></textarea>
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </div>
+                    </div>
+                     </fieldset>
+                </form>
+                
+            </div>
+
+
+            <!-- .rishi-container-->
         </div><!-- .site-content -->
         <footer class="cb__footer" data-id="type-1" itemscope="" itemtype="https://schema.org/WPFooter">
             <div data-row="top">
@@ -2174,33 +3811,40 @@
                         <section id="nav_menu-5" class="widget hide_widget_title widget_nav_menu">
                             <h2 class="widget-title" itemprop="name">Menus</h2>
                             <div class="menu-primary-container">
-                                								<ul id="menu-primary-2" class="widget-menu">
-									<li
-										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-1117">
-										<a href="/" aria-current="page"><B>HOME</B></a>
-									</li>
-									<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1124">
-										<a href="{{route('course.index')}}"><B>COURSES</B></a>
-									</li>
-									<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3412">
-										<a href="{{route('franchise.index')}}"><B>FRANCHISE</B></a>
-									</li>
-									<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3413">
-										<a href="{{route('form.index')}}"><B>FORM</B></a>
-									</li>
-									<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3414">
-										<a href="{{route('exam.index')}}"><B>EXAM</B></a>
-									</li>
-									<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1125">
-										<a href="{{route('about.index')}}"><B>ABOUT US</B></a>
-									</li>
-									<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3416">
-										<a href="{{route('contact.index')}}"><B>CONTACT US</B></a>
-									</li>
-									<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3417">
-										<a href="{{route('admin.home')}}"><B>LOGIN</B></a>
-									</li>
-								</ul>
+                                <ul id="menu-primary-2" class="widget-menu">
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-1117">
+                                        <a href="/" aria-current="page"><B>HOME</B></a>
+                                    </li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1124">
+                                        <a href="{{ route('course.index') }}"><B>COURSES</B></a>
+                                    </li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3412">
+                                        <a href="{{ route('franchise.index') }}"><B>FRANCHISE</B></a>
+                                    </li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3413">
+                                        <a href="{{ route('form.index') }}"><B>FORM</B></a>
+                                    </li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3414">
+                                        <a href="{{ route('exam.index') }}"><B>EXAM</B></a>
+                                    </li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1125">
+                                        <a href="{{ route('about.index') }}"><B>ABOUT US</B></a>
+                                    </li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3416">
+                                        <a href="{{ route('contact.index') }}"><B>CONTACT US</B></a>
+                                    </li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3417">
+                                        <a href="{{ route('admin.home') }}"><B>LOGIN</B></a>
+                                    </li>
+                                </ul>
                             </div>
                         </section>
                     </div>
@@ -2246,7 +3890,8 @@
 
 
                                 <a href="https://www.facebook.com/people/It-Career-Computer-Training-Institute/100086700579785/?mibextid=ZbWKwL"
-                                    target="_blank" rel="" data-network="facebook" aria-label="Facebook">
+                                    target="_blank" rel="" data-network="facebook"
+                                    aria-label="Facebook">
 
                                     <span class="cb__icon-container">
 
@@ -2260,11 +3905,13 @@
                                 </a>
 
                                 <a href="https://www.instagram.com/_it_career_computer_class_/?igshid=MzNlNGNkZWQ4Mg%3D%3D"
-                                    target="_blank" rel="" data-network="instagram" aria-label="Instagram">
+                                    target="_blank" rel="" data-network="instagram"
+                                    aria-label="Instagram">
 
                                     <span class="cb__icon-container">
 
-                                        <svg class="rt-icon" width="20" height="20" viewBox="0 0 511 511.9">
+                                        <svg class="rt-icon" width="20" height="20"
+                                            viewBox="0 0 511 511.9">
                                             <path
                                                 d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0" />
                                             <path
@@ -2723,6 +4370,32 @@
     <script type="text/javascript">
         jQuery(window).on('load', function() {
             jQuery('input[name="um_request"]').val('');
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+
+            $('#state-dropdown').on('change', function() {
+                var state_id = this.value;
+                $("#city-dropdown").html('');
+                $.ajax({
+                    url: "{{ url('get-cities-by-state') }}",
+                    type: "POST",
+                    data: {
+                        state_id: state_id,
+                        _token: '{{ csrf_token() }}'
+                    },
+                    dataType: 'json',
+                    success: function(result) {
+                        $('#city-dropdown').html('<option value="0">Select City</option>');
+                        $.each(result.cities, function(key, value) {
+                            $("#city-dropdown").append('<option value="' + value.id +
+                                '">' + value.name + '</option>');
+                        });
+                    }
+                });
+            });
         });
     </script>
 

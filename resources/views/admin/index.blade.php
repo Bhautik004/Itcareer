@@ -24,19 +24,19 @@
 <body class="hold-transition d-block justify-center align-content-center ">
     <div class=" text-center">
         <div class="login-logo">
-            <a href=""><b>It Career</b> Institute </a>
+            <a href=""><b>It Career Computer Training</b> Institute</a>
         </div>
     </div>
     <section class="content">
-        <div class="container-fluid">
+        <div class="container-fluid ">
             <!-- /.login-logo -->
 
-            <div class="row text-center">
+            <div class="row text-center ">
                 <div class="col-lg-4 col-6">
                     <!-- small box -->
                     <div class="small-box bg-info">
                         <div class="inner">
-                            <h3>Admin Portal</h3>
+                            <h3>Admin Portal</h3> 
                         </div>
                         <a href="{{route('admin-login')}}" class="small-box-footer">Click to Login <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
@@ -48,12 +48,12 @@
                         <div class="inner">
                             <h3>Branch Portal</h3>
                         </div>
-                        <a href="#" class="small-box-footer">Click to Login <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{route('admin-login')}}" class="small-box-footer">Click to Login <i class="fas fa-arrow-circle-right"></i></a>
                        
                     </div>
                 </div>
                 <!-- ./col -->
-                <div class="col-lg-4 col-6">
+                {{-- <div class="col-lg-4 col-6">
                     <!-- small box -->
                     <div class="small-box bg-danger">
                         <div class="inner">
@@ -63,7 +63,7 @@
                         <a href="#" class="small-box-footer">Click to Login <i class="fas fa-arrow-circle-right"></i></a>
 
                     </div>
-                </div>
+                </div> --}}
                
                 <!-- ./col -->
             </div>

@@ -17,6 +17,7 @@ Route::get('cc', function () {
     \Artisan::call('view:clear');
     \Artisan::call('view:cache');
     \Artisan::call('optimize');
+    \Artisan::call('optimize:clear');
     dd("Cache is cleared");
 
 });
@@ -49,6 +50,13 @@ Route::prefix("admin")->group(function(){
         Route::resource('/users', Admin\UserController::class);
         Route::resource('/branchs', Admin\BranchController::class);
         Route::resource('/managers', Admin\ManagerController::class);
+        Route::resource('/courses', Admin\CourseController::class);
+        Route::resource('/franchises', Admin\FranchiseController::class);
+        Route::resource('/studentenquirys', Admin\StudentEnquiryController::class);
+        Route::resource('/studentadmissions', Admin\StudentAdmissionController::class);
+        Route::resource('/onDemandExams', Admin\onDemandExamController::class);
+        Route::resource('/reports', Admin\ReportsController::class);
+
 
         Route::post('users/update', 'Admin\UserController@update')->name('users.update-user');
         Route::post('admin/users/updatepassword/', 'Admin\UserController@updatepassword')->name('users.updatepassword');
@@ -56,13 +64,29 @@ Route::prefix("admin")->group(function(){
         Route::resource('/students', Admin\StudentController::class);
         Route::post('/students/deactive', 'Admin\StudentController@UserApprove')->name('students.deactive');
         Route::post('students/destroy', 'Admin\StudentController@destroy')->name('student.destroy');
-       
+        Route::get('students/download/{id}', 'Admin\StudentController@download')->name('student.download');
+        Route::post('students/verify', 'Admin\StudentController@verifyStudent')->name('student.verifyStudent');
+        Route::get('studentVerify/StudentList', 'Admin\StudentController@verifyStudentList')->name('student.verifyStudentList');
+        Route::get('examSchedule/StudentList', 'Admin\StudentController@examSchedule')->name('student.examSchedule');
+        Route::post('generatePassword', 'Admin\StudentController@generatePassword')->name('student.generatePassword');
+
         Route::post('branch/destroy', 'Admin\BranchController@destroy')->name('branch.destroy');
         Route::post('branch/deactive', 'Admin\BranchController@branchApprove')->name('branchs.deactive');
 
 
         Route::post('managers/deactive', 'Admin\ManagerController@UserApprove')->name('managers.deactive');
         Route::post('managers/destroy', 'Admin\ManagerController@destroy')->name('manager.destroy');
+
+        Route::post('courses/deactive', 'Admin\CourseController@courseApprove')->name('courses.deactive');
+        Route::post('courses/destroy', 'Admin\CourseController@destroy')->name('course.destroy');
+
+        Route::post('onDemandExam/destroy', 'Admin\onDemandExamController@destroy')->name('onDemandExam.destroy');
+        Route::get('onDemandExam/download/{id}', 'Admin\onDemandExamController@formDownoad')->name('onDemandExam.download');
+
+        Route::get('reports/course/Reports', 'Admin\ReportsController@courseWiseReports')->name('reports.courseWiseReports');
+        Route::get('reports/duration/Reports', 'Admin\ReportsController@durationWiseReports')->name('reports.durationWiseReports');
+
+
 
         Route::post('import', 'Admin\StudentController@importData')->name('admin.import');
 

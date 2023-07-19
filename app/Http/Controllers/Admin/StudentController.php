@@ -5,12 +5,19 @@ use App\Http\Controllers\Controller;
 use App\Models\Student;
 use App\Models\User;
 use App\Models\State;
+use App\Models\StudentExam;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use App\Models\Role;
+use App\Models\Course;
+use App\Models\StudentVerify;
 use DB;
 use Maatwebsite\Excel\Facades\Excel;
 use PhpOffice\PhpSpreadsheet\Shared;
+use PDF;
+use App\Models\CertificateRecord;
+use Illuminate\Support\Facades\Crypt;
+use App\Exports\UsersExport; 
 class StudentController extends Controller
 {
     /**
@@ -26,7 +33,14 @@ class StudentController extends Controller
             return redirect()->back()->with('message','Permissions insuffisantes !')->with('message_type','warning');
         }else{
             $get_student_role_id = Role::where('slug','=','user')->pluck('id');
-            $students = User::where("role",'=',$get_student_role_id)->orderBy('status', 'DESC')->orderBy('id','DESC')->get();
+            if(auth()->user()->roles->slug == "super-admin"){
+                $students = User::with('courseName')->where("role",'=',$get_student_role_id)->orderBy('status', 'DESC')->orderBy('id','DESC')->get();
+
+            }else{
+                $branch_id = auth()->user()->branch_id;
+                $students = User::with('courseName')->where("role",'=',$get_student_role_id)->where('branch_id',$branch_id)->orderBy('status', 'DESC')->orderBy('id','DESC')->get();
+            }
+
             return view('admin.student.index', compact('students'));
         }
     }
@@ -38,10 +52,17 @@ class StudentController extends Controller
      */
     public function create()
     {
-        $prefix = 'ITCAREER'; // Replace with your desired prefix
-        $data['serialNumber'] = User::generateSerialNumber();
+        // Replace with your desired prefix
+        if(auth()->user()->roles->slug == "super-admin"){
+            $branch_id = 0;
+        }else{
+            $branch_id = auth()->user()->branch_id;
+        }
 
+        $data['serialNumber'] = User::generateSerialNumber($branch_id);
         $data['states'] = State::get(["name","id"]);
+        $data['courses'] = Course::get(["name","id"]);
+
         return view('admin.student.create',$data)->with('loader',true);
     }
 
@@ -124,6 +145,7 @@ class StudentController extends Controller
 
             $dob_u = Carbon::parse($request->dob);
             $input['dob'] = $dob_u;
+            $input['branch_id'] = auth()->user()->branch_id;
             $get_student_role_id = Role::select('id')->where('slug','=','user')->first();
 
             $input['role'] = $get_student_role_id->id;
@@ -277,18 +299,113 @@ class StudentController extends Controller
 
     }
 
+    public function download(Request $request){
+        // dd($request->id);
+        $decryptedID = Crypt::decryptString($request->id);
+        $data = User::with('branchName','courseName')->find($decryptedID)->toArray();
+        
+        return view('admin.onDemandExam.formDownload', compact('data'));
+
+        // return view('admin.onDemandExam.formDownload', compact('data'));
+    }
+
+    public function verifyStudent(Request $request){
+
+        $student_id = $request->student_id;
+        $branch_id = $request->branch_id;
+        $trx_no = $request->trx_no;
+
+        StudentVerify::create([
+            'student_id'=>$student_id,
+            'trx_no'=>$trx_no,
+            'trx_date'=>now(),
+            'branch_id'=>$branch_id,
+        ]);
+
+        User::where('id',$student_id)->update(['verify_status'=>'1']);
+        return redirect()->route('students.index')
+            ->with('message', 'Students Verify successfully.')->with('loader',true);
+        
+    }
+
+    public function verifyStudentList(){
+
+        if(auth()->user()->roles->slug == "super-admin"){
+            $branch_id = 0;
+            $studentList =  StudentVerify::select('student_id')->where('status',0)->get();
+            $students = User::with('verifyInfo')->whereIn('id',$studentList)->get();
+
+        }else{
+            $branch_id = auth()->user()->branch_id;
+            $studentList =  StudentVerify::where('branch_id',$branch_id)->where('status',0)->get();
+            $students = User::with('verifyInfo')->whereIn('id',$studentList)->get();
+        }
+        return view('admin.student.verifystudent', compact('students'));
+    }
+
+    public function generatePassword(Request $request){
+        
+        $selected_ids = $request->selected;
+
+       
+         if(auth()->user()->roles->slug == "super-admin"){
+            $branch_id = 0;
+
+        }else{
+            $branch_id = auth()->user()->branch_id;  
+        }
+
+        foreach ($selected_ids as $k => $v) {
+            $info = User::select('id','f_name')->where('id',$v)->where('verify_status',1)->get()->first();
+           
+            $password = $info['f_name'].'@'.$info['id'];
+            StudentExam::create([
+                'student_id'=>$info['id'],
+                'student_user_id'=>$info['f_name'],
+                'student_password'=>$password,
+                'exam_status'=>0,
+                'branch_id'=>$branch_id,
+                'status'=>1
+            ]);
+            User::where('id',$v)->update(['verify_status'=>'2']);
+            StudentVerify::where('student_id',$v)->update(['status'=>1]);
+        }
+        
+        StudentVerify::whereNotIn('student_id',[$v])->update(['status'=>2]);
+        
+        return Excel::download(new UsersExport, 'Students.xlsx');
+
+    }
+
+    public function examSchedule(){
+
+        if(auth()->user()->roles->slug == "super-admin"){
+            $branch_id = 0;
+            $studentList =  StudentVerify::select('student_id')->get();
+            $students = User::with('verifyInfo','examInfo')->whereIn('id',$studentList)->get();
+
+        }else{
+            $branch_id = auth()->user()->branch_id;
+            $studentList =  StudentVerify::where('branch_id',$branch_id)->get();
+            $students = User::with('verifyInfo','examInfo')->whereIn('id',$studentList)->get();
+        }
+        return view('admin.student.examschedule', compact('students'));
+    }
+    
+    
+
 
     function importData(Request $request)
     {
 
-     $this->validate($request, [
-      'select_file'  => 'required|mimes:xls,xlsx'
-     ]);
+        $this->validate($request, [
+        'select_file'  => 'required|mimes:xls,xlsx'
+        ]);
 
-     $path = $request->file('select_file')->getRealPath();
+        $path = $request->file('select_file')->getRealPath();
 
-   
-    //  $data = Excel::load($path)->get();
+    
+        //  $data = Excel::load($path)->get();
 
      $data = Excel::toArray([],$path);
 
@@ -313,7 +430,7 @@ class StudentController extends Controller
                                 'center_district' =>$row['8'],
                                 'exam_date' =>Carbon::instance(\PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject($row['9'])),
                                 'issue_date' =>Carbon::instance(\PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject($row['10'])),
-                                'certificate_no' =>$row['11'],
+                                'certificate_no' =>sprintf('%04d', $row['11']),
                                 'grade' => $row['12'],
                                 'photo_name' => $row['13'],
                                 'birth_date' => Carbon::instance(\PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject($row['14'])),
@@ -331,4 +448,6 @@ class StudentController extends Controller
             return back()->with('success', 'Excel Data Imported successfully.');
         }
     }
+
+   
 }

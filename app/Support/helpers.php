@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Config;
 // use DateTime;
 
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\UsersExport; 
+
+
 if(!function_exists('check_permission')){
 
     function check_permission($controller , $action){
@@ -45,3 +49,13 @@ if(!function_exists('check_permission')){
 
 }
 
+if(!function_exists('excel_download')){
+
+    function excel_download($model,$filename){
+
+        Excel::download($model, $filename);
+
+        return 1;
+    }
+
+}

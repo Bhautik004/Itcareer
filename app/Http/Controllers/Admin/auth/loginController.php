@@ -48,8 +48,7 @@ class loginController extends Controller
         ]);
         $remember = $request->has('remember') ? true : false;
 
-        if (auth()->attempt(array('email' => $request->email, 'password' => $input['password'],'status'=>1), $remember) ||
-            auth()->attempt(array('username' => $request->username, 'password' => $input['password'],'status'=>1), $remember)) {
+        if (auth()->attempt(array('email' => $request->email, 'password' => $input['password'],'status'=>1), $remember)) {
 
           
                 $getUserRole = Role::where('id', Auth::user()->role)->first();

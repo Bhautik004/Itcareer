@@ -59,6 +59,7 @@
     <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/dist/css/rescalendar.css') }}">
 
+    {{-- <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css"> --}}
     <link rel="stylesheet" href="https://cdn.datatables.net/datetime/1.4.0/css/dataTables.dateTime.min.css">
 
 
@@ -129,6 +130,7 @@
     <script src="{{ asset('assets/plugins/jquery-knob/jquery.knob.min.js') }}"></script>
     <!-- daterangepicker -->
     <script src="{{ asset('assets/plugins/moment/moment.min.js') }}"></script>
+
     <script src="{{ asset('assets/plugins/daterangepicker/daterangepicker.js') }}"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twix.js/1.2.1/twix.min.js"></script>
@@ -145,8 +147,8 @@
     <script src="{{ asset('assets/plugins/jquery-validation/jquery.validate.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/jquery-validation/additional-methods.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
-    <script src="{{ asset('assets/js/push.min.js') }}"></script>
-    <script src="{{ asset('assets/dist/js/dropzone.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/push.min.js') }}"></script> --}}
+    {{-- <script src="{{ asset('assets/dist/js/dropzone.js') }}"></script> --}}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.4/css/bootstrap2/bootstrap-switch.css"
         rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.4/js/bootstrap-switch.min.js"></script>
@@ -154,16 +156,24 @@
     <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
     <script src='https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js'></script>
     <script src="{{ asset('assets/plugins/bs-stepper/js/bs-stepper.min.js') }}"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
+
+    <script src="https://cdn.datatables.net/plug-ins/1.13.4/sorting/datetime-moment.js"></script>
+    
     <script src="https://cdn.datatables.net/datetime/1.4.0/js/dataTables.dateTime.min.js"></script>
     <script src="https://cdn.datatables.net/plug-ins/1.10.11/sorting/date-eu.js"></script>
-    <script src="https://cdn.datatables.net/plug-ins/1.13.4/sorting/datetime-moment.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
+    
+    {{-- <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script> --}}
+    <script src="//cdn.ckeditor.com/4.22.1/basic/ckeditor.js"></script>
+    
+
 
     <script>
         @yield('script')
     </script>
    
-   <script>
+   {{-- <script>
         $(window).on('beforeunload', function() {
             $('#loaders').show();
         });
@@ -182,14 +192,14 @@
         })
 
 
-    </script>
+    </script> --}}
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.1/web-animations.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
    
     <script src="{{ asset('assets/js/role_module.js') }}"></script>1
     <script src="{{ asset('assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
-
     <script>
             $('.select2').select2();
             //Initialize Select2 Elements
@@ -201,6 +211,51 @@
                 format: 'DD-MM-YYYY',
                 defaultDate: false
             });
+
+            
+            $(document).ready(function() {
+            $('#exam_date').datetimepicker({
+                disabledDates: getDisabledDates(),
+                daysOfWeekDisabled: [0, 1, 2, 3, 4, 5],
+                format: 'DD-MM-YYYY',
+                defaultDate: false
+            });
+            });
+
+            function getDisabledDates() {
+            var disabledDates = [];
+            var currentDate = new Date();
+            
+            while (currentDate.getDay() !== 5) { // Loop until we reach the next Saturday
+                currentDate.setDate(currentDate.getDate() + 1);
+                disabledDates.push(currentDate);
+            }
+            
+            return disabledDates;
+            }
+
+            $('#daterange-btn').daterangepicker({
+                ranges: {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1,
+                'month').endOf('month')]
+                },
+                "autoUpdateInput": true,
+                startDate: moment().subtract(29, 'days'),
+                endDate: moment(),
+                
+            },
+            function(start, end, label) {
+            // console.log('New date range selected: ' + start.format('DD-MM-YYYY') + ' to ' + end.format('DD-MM-YYYY') + '
+            // (predefined range: ' + label + ')');
+            $('#reportrange').val(start.format('DD/MM/YYYY') + ' - ' + end.format('DD/MM/YYYY'))
+            
+            }
+            )
     </script>
 
     <script>
@@ -257,6 +312,7 @@
 
         });
     </script>
+
 </body>
 
 </html>

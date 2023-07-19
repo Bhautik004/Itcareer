@@ -8,6 +8,7 @@
     $studentsEdit = check_permission('Student','edit');
     $studentsDelete = check_permission('Student','destroy');
     $studentsView = check_permission('Student','show');
+    $studentsVerify = check_permission('Student','verifyStudent');
     $url =  url('/images');
     $doc_url =  url('/Student_Education_Document');
 ?>
@@ -74,6 +75,9 @@
                     <tr>
                       <th>No.</th>
                       <th>Register Number</th>
+                        @if(Auth::user()->role == 1)
+                            <th>Center Name</th>
+                        @endif
                       <th>Profile</th>
                       <th>Name</th>
                       <th>Contact</th>
@@ -91,6 +95,9 @@
                     <tr>
                       <td>{{$count}}</td>
                       <td>{{$studentsData->register_no}}</td>
+                        @if(Auth::user()->role == 1)
+                        <td>{{$studentsData->branchName->name}}</td>
+                        @endif
                       <td>
                         @if($studentsData->profile_pic)
                         <img class="direct-chat-img mr-3 frame"  src="{{$url}}{{'/'.$studentsData->profile_pic}}"alt="Message User Image">
@@ -106,7 +113,7 @@
                      </td>
                      <td>{{$studentsData->email}}<br>{{$studentsData->phone}}<br>Date of Birth : {{$studentsData->dob}}
                         </td>
-                        <td>{{$studentsData->course_id}}</td>
+                        <td>{{$studentsData->courseName->name}}</td>
                       <td>
                         <a href="JavaScript:void(0)" class="badge {{$studentsData->status == 1 ? "bg-success" : "bg-danger"}} activebtn"
                         data-id="{{ $studentsData->id }}"  data-status="{{$studentsData->status}}">{{
@@ -115,16 +122,21 @@
                     </td>
                       @if($studentsEdit == 1 || $studentsDelete == 1)
                       <td>
+                            <a class="btn bg-info " href="{{route('student.download',['id'=>Crypt::encryptString($studentsData->id)])}}" ><i class="fas fa-download" style='color: white'></i></a>
 
                             @if($studentsView == 1)
                                 <a class="btn bg-warning showprofile" href="JavaScript:void(0)" data-id="{{$studentsData->id}}" data-toggle="modal" data-target="#modal-xl"><i class="fas fa-eye" style='color: white'></i></a>
                             @endif
-                           @if($studentsEdit == 1)
+                            @if($studentsEdit == 1)
                                 <a class="btn bg-primary" href="{{route('students.edit',$studentsData->id)}}"><i class="fas fa-edit"></i></a>
                             @endif
 
                             @if($studentsDelete == 1)
                                 <button class="btn btn-danger deleteButton"  data-id="{{ $studentsData->id }}" type="submit"><i class="fas fa-trash"></i></button>
+                            @endif
+                            @if($studentsVerify == 1 &&  $studentsData->verify_status == 0)
+                            <button class="btn btn-success verifyButton" data-id="{{ $studentsData->id }}" data-branchId="{{ $studentsData->branch_id}}" data-toggle="modal" data-target="#modal-verify"><i
+                                class="fas fa-check"></i></button>
                             @endif
 
                       </td>
@@ -205,6 +217,52 @@
     </div>
     <!-- /.modal-dialog -->
   </div>
+</div>
+
+
+<div class="modal fade" id="modal-verify">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Student Verify</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post" action="{{route('student.verifyStudent')}}">
+          @csrf
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+                <img src="/qr/qr.png" alt="..." class="img-thumbnail" width="200" height="200">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <p> Count Fees to pay for Without Material as...</p>
+            <p> Rs. 300/- per Student for CCC Course</p>
+            <p> Rs. 500/- per Student for Typing Course</p>
+            <p> Rs. 1000/- per Student for 6 , 9, 12, Month Course</p>
+            <input type="hidden" name="student_id" value="" id="student_id">
+            <input type="hidden" name="branch_id" value="" id="branch_id">
+           <input type="text" class="form-control" name="trx_no" placeholder="Enter Transaction Number" value="{{ old('trx_no') }}"
+              required>
+
+            <div class="modal-footer justify-content-between">
+              <button type="submit" class="btn btn-default" >Submit</button>
+            </div>
+          </div>
+        </div>
+        </form>
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+</div>
 
 
 @stop
@@ -295,6 +353,18 @@ $('.deleteButton').on('click', function(e){
 
             });
     });
+
+
+    $(document).on('click', '.verifyButton', function(e){
+
+    var id = $(this).data('id');
+    var branch_id = $(this).data('branchId');
+    $('#student_id').val(id);
+    $('#branch_id').val(branch_id);
+
+    
+  });
+
 
     $(document).on('click','.activebtn',function(e){
         var id = $(this).data('id');
