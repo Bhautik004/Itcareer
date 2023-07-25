@@ -81,7 +81,11 @@ Route::get('/student-verify', function () {
 Route::any('/search',function(){
     $q = Input::get ( 'q' );
     $bday = Input::get ( 'bday' );
-    $user = CertificateRecord::where('certificate_no','=',$q)->Where('birth_date','=',$bday)->get();
+    
+    $newDate = date("Y-d-m", strtotime($bday));  
+
+    $user = CertificateRecord::where('certificate_no','=',$q)->Where('birth_date','=',$newDate)->get();
+    
     if(count($user) > 0)
         return view('frontend.studentverify.index')->withDetails($user)->withQuery ( $q );
     else return view ('frontend.studentverify.index')->withMessage('No Details found. Try to search again !');

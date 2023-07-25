@@ -404,8 +404,6 @@ class StudentController extends Controller
 
         $path = $request->file('select_file')->getRealPath();
 
-    
-        //  $data = Excel::load($path)->get();
 
      $data = Excel::toArray([],$path);
 
@@ -417,6 +415,7 @@ class StudentController extends Controller
                 
                 foreach($value as $row)
                 {
+                    
                     
                         $insert_data[] = array(
                                 'register_no' =>$row['0'],
