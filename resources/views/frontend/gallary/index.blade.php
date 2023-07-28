@@ -3600,7 +3600,7 @@
 
   <section>
     <div class="container mt-3" style="text-align: center">
-        <h4>Our Center Information</h4>
+        <h2><b>GALLERY</b></h2>
     </div>
        <div class="container">
         <div class="row">
