@@ -95,6 +95,7 @@
 @section('script')
 
 $("document").ready(function () {
+  
 
   $("#roles").DataTable({
         "responsive": true,

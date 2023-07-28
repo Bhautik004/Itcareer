@@ -10,6 +10,7 @@ use App\Models\CertificateRecord;
 use App\Models\State;
 use App\Models\Course;
 use App\Models\Branch;
+use App\Models\Gallery;
 use Illuminate\Support\Facades\Request as Input;
 /*
 |--------------------------------------------------------------------------
@@ -66,6 +67,19 @@ Route::get('/exam', function () {
 Route::get('/about', function () {
     return view('frontend.about.index');
 })->name('about.index');
+
+Route::get('/center', function () {
+    $data['branches'] = Branch::with('stateName','cityName','user')->get();
+
+ 
+    return view('frontend.center.index',$data);
+})->name('center.index');
+
+Route::get('/gallary', function () {
+    $data['gallery'] = Gallery::get(["img_name"]);
+    return view('frontend.gallary.index',$data);
+})->name('gallary.index');
+
 
 Route::get('/contact', function () {
     return view('frontend.contact.index');

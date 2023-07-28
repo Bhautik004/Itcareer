@@ -3429,6 +3429,8 @@
                                             data-responsive="yes" itemscope=""
                                             itemtype="http://schema.org/SiteNavigationElement">
 
+                                           
+
                                             <ul id="menu-primary" class="menu">
                                                 <li id="menu-item-1117"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home  menu-item-1117 ">
@@ -3436,67 +3438,47 @@
                                                         <b>HOME</b>
                                                     </a>
                                                 </li>
-                                                <li id="menu-item-1124"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1124 ">
+                                                <li id="menu-item-1124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1124 ">
                                                     <a href="{{ route('course.index') }}">
                                                         <b>COURSES</b>
                                                     </a>
                                                 </li>
-                                                <li id="menu-item-3412"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3412 ">
+                                                <li id="menu-item-3412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3412 ">
                                                     <a href="{{ route('franchise.index') }}">
                                                         <b>FRANCHISE</b>
                                                     </a>
                                                 </li>
-                                                <li id="menu-item-3413"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3413 animated-submenu page_item page-item-6">
-                                                    <a href="#">
-                                                        <b>STUDENT SECTION</b>
-                                                        <span class="child-indicator submenu-toggle">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="10"
-                                                                height="5" viewBox="0 0 10 5">
-                                                                <path id="Polygon_5" data-name="Polygon 5"
-                                                                    d="M5,0l5,5H0Z"
-                                                                    transform="translate(10 5) rotate(180)" />
-                                                            </svg>
-                                                        </span>
+                                                <li id="menu-item-1125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1125">
+                                                    <a href="{{route('center.index')}}">
+                                                        <b>CENTER</b>
                                                     </a>
-                                                    <ul class="sub-menu">
-                                                        <li id="menu-item-4250"
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4250">
-                                                            <a href="{{ route('form.index') }}">
-                                                                <b>STUDENT ENQUIRY</b>
-                                                            </a>
-                                                        </li>
-                                                        <li id="menu-item-4251"
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4251">
-                                                            <a href="{{ route('admission.index') }}">
-                                                                <b>STUDENT ADMISSION</b>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
                                                 </li>
+                                            
+                                                <li id="menu-item-3416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3416">
+                                                    <a href="{{ route('studentverify.index') }}">
+                                                        <b>Certificate Verification</b>
+                                                    </a>
+                                                </li>
+                                            
                                                 <li id="menu-item-3414"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3414">
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3414 ">
                                                     <a href="{{ route('exam.index') }}">
                                                         <b>EXAM</b>
                                                     </a>
                                                 </li>
-                                                <li id="menu-item-1125"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1125">
-                                                    <a href="{{ route('about.index') }}">
-                                                        <b>ABOUT US</b>
+                                            
+                                                <li id="menu-item-1125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1125">
+                                                    <a href="{{route('gallary.index')}}">
+                                                        <b>GALLARY</b>
                                                     </a>
                                                 </li>
-                                                <li id="menu-item-3416"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3416
-                                                    animated-submenu current-menu-item page_item page-item-6 current_page_item">
+                                                <li id="menu-item-3416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3416 animated-submenu current-menu-item page_item page-item-6 current_page_item">
                                                     <a href="{{ route('contact.index') }}">
-                                                        <b>CONTACT US</b>
+                                                        <b>CONTACT</b>
                                                     </a>
                                                 </li>
-                                                <li id="menu-item-3417"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3417">
+                                            
+                                                <li id="menu-item-3417" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3417">
                                                     <a href="{{ route('admin.home') }}">
                                                         <b>LOGIN</b>
                                                     </a>
@@ -3584,38 +3566,58 @@
                         <div class="cb__panel_content" data-device="desktop"></div>
                         <div class="cb__panel_content" data-device="mobile">
                             <nav class="mobile-menu" data-id="mobile-menu" data-type="type-1">
-                                <ul id="menu-primary-1" class="">
-                                    <li
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1117">
-                                        <a href="../../index.html"><B>HOME</B></a>
+                            
+                                <ul id="menu-primary" class="menu">
+                                    <li id="menu-item-1117"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home  menu-item-1117 ">
+                                        <a href="/" aria-current="page">
+                                            <b>HOME</b>
+                                        </a>
                                     </li>
-                                    <li
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1124">
-                                        <a href="../courses/index.html"><B>COURSES</B></a>
+                                    <li id="menu-item-1124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1124 ">
+                                        <a href="{{ route('course.index') }}">
+                                            <b>COURSES</b>
+                                        </a>
                                     </li>
-                                    <li
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3412">
-                                        <a href="../franchise/index.html"><B>FRANCHISE</B></a>
+                                    <li id="menu-item-3412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3412 ">
+                                        <a href="{{ route('franchise.index') }}">
+                                            <b>FRANCHISE</b>
+                                        </a>
                                     </li>
-                                    <li
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3413">
-                                        <a href="../form/index.html"><B>FORM</B></a>
+                                    <li id="menu-item-1125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1125">
+                                        <a href="{{route('center.index')}}">
+                                            <b>CENTER</b>
+                                        </a>
                                     </li>
-                                    <li
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3414">
-                                        <a href="../exam/index.html"><B>EXAM</B></a>
+                                
+                                    <li id="menu-item-3416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3416">
+                                        <a href="{{ route('studentverify.index') }}">
+                                            <b>Certificate Verification</b>
+                                        </a>
                                     </li>
-                                    <li
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1125">
-                                        <a href="../about/index.html"><B>ABOUT US</B></a>
+                                
+                                    <li id="menu-item-3414"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3414 ">
+                                        <a href="{{ route('exam.index') }}">
+                                            <b>EXAM</b>
+                                        </a>
                                     </li>
-                                    <li
-                                        class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1132 current_page_item menu-item-3416">
-                                        <a href="index.html" aria-current="page"><B>CONTACT US</B></a>
+                                
+                                    <li id="menu-item-1125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1125">
+                                        <a href="{{route('gallary.index')}}">
+                                            <b>GALLARY</b>
+                                        </a>
                                     </li>
-                                    <li
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3417">
-                                        <a href="../user-login/index.html"><B>LOGIN</B></a>
+                                    <li id="menu-item-3416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3416 animated-submenu current-menu-item page_item page-item-6 current_page_item">
+                                        <a href="{{ route('contact.index') }}">
+                                            <b>CONTACT</b>
+                                        </a>
+                                    </li>
+                                
+                                    <li id="menu-item-3417" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3417">
+                                        <a href="{{ route('admin.home') }}">
+                                            <b>LOGIN</b>
+                                        </a>
                                     </li>
                                 </ul>
                             </nav>
@@ -4115,23 +4117,15 @@
                 <div class="cb__container" data-stack="tablet:mobile">
                     <div data-column="widget-area-5">
                         <section id="block-9" class="widget hide_widget_title widget_block widget_media_image">
-                            <figure class="wp-block-image size-large is-resized"><img decoding="async"
-                                    loading="lazy"
-                                    src="../../wp-content/uploads/2023/05/fgghjhgj_page-0001-1024x1024.png"
-                                    alt="" class="wp-image-4008" width="193" height="193"
-                                    srcset="https://itcareerinstitute.org/wp-content/uploads/2023/05/fgghjhgj_page-0001-1024x1024.png 1024w, https://itcareerinstitute.org/wp-content/uploads/2023/05/fgghjhgj_page-0001-300x300.png 300w, https://itcareerinstitute.org/wp-content/uploads/2023/05/fgghjhgj_page-0001-150x150.png 150w, https://itcareerinstitute.org/wp-content/uploads/2023/05/fgghjhgj_page-0001-768x768.png 768w, https://itcareerinstitute.org/wp-content/uploads/2023/05/fgghjhgj_page-0001-270x270.png 270w, https://itcareerinstitute.org/wp-content/uploads/2023/05/fgghjhgj_page-0001-370x370.png 370w, https://itcareerinstitute.org/wp-content/uploads/2023/05/fgghjhgj_page-0001-170x170.png 170w, https://itcareerinstitute.org/wp-content/uploads/2023/05/fgghjhgj_page-0001-1536x1536.png 1536w, https://itcareerinstitute.org/wp-content/uploads/2023/05/fgghjhgj_page-0001-2048x2048.png 2048w, https://itcareerinstitute.org/wp-content/uploads/2023/05/fgghjhgj_page-0001-75x75.png 75w"
-                                    sizes="(max-width: 193px) 100vw, 193px" /></figure>
+                            <figure class="wp-block-image size-large is-resized"><img decoding="async" loading="lazy"
+                                    src="wp-content/uploads/2023/05/fgghjhgj_page-0001-1024x1024.png" alt="" class="wp-image-4008" width="193"
+                                    height="193">
+                        
                         </section>
-                        <section id="block-53" class="widget hide_widget_title widget_block">
-                            <h5 class="wp-block-heading has-text-align-left">OUR VISITORS</h5>
-                        </section>
-                        <section id="block-57" class="widget hide_widget_title widget_block">
-                            <!-- Start of CuterCounter Code -->
-                            <a href="https://www.cutercounter.com/" target="_blank"><img decoding="async"
-                                    src="https://www.cutercounter.com/hits.php?id=hrexnfado&amp;nd=6&amp;style=80"
-                                    border="0" alt="website counter"></a>
-                            <!-- End of CuterCounter Code -->
-                        </section>
+                      <!-- Start of CuterCounter Code -->
+                                            <a href="https://www.cutercounter.com/" target="_blank" style="margin-top: 20px;margin-left:10px;"><img
+                                                    src="https://www.cutercounter.com/hits.php?id=hvmxnpqpx&nd=6&style=80" border="0" alt="hit counter"></a>
+                                            <!-- End of CuterCounter Code -->
                     </div>
                     <div data-column="widget-area-1">
                         <section id="nav_menu-5" class="widget hide_widget_title widget_nav_menu">
@@ -4150,17 +4144,19 @@
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3412">
                                         <a href="{{ route('franchise.index') }}"><B>FRANCHISE</B></a>
                                     </li>
-                                    <li
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3413">
-                                        <a href="{{ route('form.index') }}"><B>FORM</B></a>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3413">
+                                        <a href="{{ route('center.index') }}"><B>CENTER</B></a>
                                     </li>
                                     <li
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3414">
-                                        <a href="{{ route('exam.index') }}"><B>EXAM</B></a>
+                                        <a href="{{ route('studentverify.index') }}"><B>Certificate Verification</B></a>
                                     </li>
                                     <li
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1125">
-                                        <a href="{{ route('about.index') }}"><B>ABOUT US</B></a>
+                                        <a href="{{ route('exam.index') }}"><B>EXAM</B></a>
+                                    </li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1125">
+                                        <a href="{{ route('gallery.index') }}"><B>GALLERY</B></a>
                                     </li>
                                     <li
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3416">

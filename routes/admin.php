@@ -56,6 +56,7 @@ Route::prefix("admin")->group(function(){
         Route::resource('/studentadmissions', Admin\StudentAdmissionController::class);
         Route::resource('/onDemandExams', Admin\onDemandExamController::class);
         Route::resource('/reports', Admin\ReportsController::class);
+        Route::resource('/gallery', Admin\GalleryController::class);
 
 
         Route::post('users/update', 'Admin\UserController@update')->name('users.update-user');
@@ -86,6 +87,8 @@ Route::prefix("admin")->group(function(){
         Route::get('reports/course/Reports', 'Admin\ReportsController@courseWiseReports')->name('reports.courseWiseReports');
         Route::get('reports/duration/Reports', 'Admin\ReportsController@durationWiseReports')->name('reports.durationWiseReports');
 
+
+        Route::post('galleries/destroy', 'Admin\GalleryController@destroy')->name('galleries.destroy');
 
 
         Route::post('import', 'Admin\StudentController@importData')->name('admin.import');

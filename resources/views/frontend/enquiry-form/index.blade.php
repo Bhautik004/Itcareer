@@ -3531,16 +3531,10 @@
                                     srcset="https://itcareerinstitute.org/wp-content/uploads/2023/05/fgghjhgj_page-0001-1024x1024.png 1024w, https://itcareerinstitute.org/wp-content/uploads/2023/05/fgghjhgj_page-0001-300x300.png 300w, https://itcareerinstitute.org/wp-content/uploads/2023/05/fgghjhgj_page-0001-150x150.png 150w, https://itcareerinstitute.org/wp-content/uploads/2023/05/fgghjhgj_page-0001-768x768.png 768w, https://itcareerinstitute.org/wp-content/uploads/2023/05/fgghjhgj_page-0001-270x270.png 270w, https://itcareerinstitute.org/wp-content/uploads/2023/05/fgghjhgj_page-0001-370x370.png 370w, https://itcareerinstitute.org/wp-content/uploads/2023/05/fgghjhgj_page-0001-170x170.png 170w, https://itcareerinstitute.org/wp-content/uploads/2023/05/fgghjhgj_page-0001-1536x1536.png 1536w, https://itcareerinstitute.org/wp-content/uploads/2023/05/fgghjhgj_page-0001-2048x2048.png 2048w, https://itcareerinstitute.org/wp-content/uploads/2023/05/fgghjhgj_page-0001-75x75.png 75w"
                                     sizes="(max-width: 193px) 100vw, 193px" /></figure>
                         </section>
-                        <section id="block-53" class="widget hide_widget_title widget_block">
-                            <h5 class="wp-block-heading has-text-align-left">OUR VISITORS</h5>
-                        </section>
-                        <section id="block-57" class="widget hide_widget_title widget_block">
-                            <!-- Start of CuterCounter Code -->
-                            <a href="https://www.cutercounter.com/" target="_blank"><img decoding="async"
-                                    src="https://www.cutercounter.com/hits.php?id=hrexnfado&amp;nd=6&amp;style=80"
-                                    border="0" alt="website counter"></a>
-                            <!-- End of CuterCounter Code -->
-                        </section>
+                       <!-- Start of CuterCounter Code -->
+                                            <a href="https://www.cutercounter.com/" target="_blank" style="margin-top: 20px;margin-left:10px;"><img
+                                                    src="https://www.cutercounter.com/hits.php?id=hvmxnpqpx&nd=6&style=80" border="0" alt="hit counter"></a>
+                                            <!-- End of CuterCounter Code -->
                     </div>
                     <div data-column="widget-area-1">
                         <section id="nav_menu-5" class="widget hide_widget_title widget_nav_menu">

@@ -119,6 +119,15 @@ foreach ($permissionData as $perArr) {
                             </a>
                         @endif
                     </li>
+                    <li class="nav-item">
+                        @if (check_permission('gallery', 'index') == '1')
+                        <a href="{{ route('gallery.index') }}"
+                            class="nav-link {{ request()->segment(2) == 'gallery' ? 'active' : '' }}">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Manage Gallery</p>
+                        </a>
+                        @endif
+                    </li>
 
                     
 
@@ -177,15 +186,6 @@ foreach ($permissionData as $perArr) {
                                 </a>
                                 @endif
                             </li>
-
-
-
-
-
-
-
-                            
-
                         </ul>
                     </li>
 
