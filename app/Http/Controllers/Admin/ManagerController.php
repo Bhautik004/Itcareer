@@ -89,6 +89,7 @@ class ManagerController extends Controller
 
             $input = $request->all();
 
+            $branch_name = Branch::select('name')->where('id',$input['branch_id'])->pluck('name');
             $dob_u = Carbon::parse($request->dob);
             $input['dob'] = $dob_u;
             $get_manager_role_id = Role::select('id')->where('slug','=','manager')->first();
@@ -97,12 +98,12 @@ class ManagerController extends Controller
             $managers = User::create($input);
 
 
-            $name = $input['f_name'].$input['l_name'];
+            $name = $input['f_name']." ".$input['l_name'];
             $email = $input['email'];
             $password = "password";    
             $company_email = "itcareer.help4you@gmail.com";
             $title = "You are selected for our Branch Head";
-            $brnchname = "xyz";
+            $brnchname = $branch_name[0];
 
             Mail::send('admin.email.manager', ['title'=>$title,'name'=>$name,'email'=>$email,'password'=>$password,'brnchname'=>$brnchname], 
                 function ($message) use ($name,$email,$password,$title,$company_email,$brnchname){

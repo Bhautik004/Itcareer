@@ -622,7 +622,7 @@
                                                                         IT CAREER COMPUTER TRAINING INSTITUTE</h1>
                                                                     <h2
                                                                         style="text-align:center;font-weight:normal;font-family:Helvetica,Arial,sans-serif;font-size:23px;margin-bottom:10px;color:#C9BC20;line-height:135%;">
-                                                                        Congratulations🤩🤩</h2>
+                                                                        Congratulations🤩</h2>
                                                                     <div
                                                                         style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#FFFFFF;line-height:135%;">
                                                                         {{$name}} you are selected for Branch Head.
@@ -661,7 +661,7 @@
                                                                                     Branch Name : {{$brnchname}}</h3>
                                                                                 <div
                                                                                     style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color:#5F5F5F;line-height:135%;">
-                                                                                    Email : {{$email}}
+                                                                                    Email : {{$email}} <br>
                                                                                     Password : {{$password}}</div>
 
                                                                                 <div
@@ -725,48 +725,7 @@
 
                     </table>
 
-                    <!-- footer -->
-                    <table bgcolor="#E1E1E1" border="0" cellpadding="0" cellspacing="0" width="500" id="emailFooter">
-                        <tr>
-                            <td align="center" valign="top">
-                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                        <td align="center" valign="top">
-                                            <table border="0" cellpadding="0" cellspacing="0" width="500"
-                                                class="flexibleContainer">
-                                                <tr>
-                                                    <td align="center" valign="top" width="500"
-                                                        class="flexibleContainerCell">
-                                                        <table border="0" cellpadding="30" cellspacing="0" width="100%">
-                                                            <tr>
-                                                                <td valign="top" bgcolor="#E1E1E1">
-
-                                                                    <div
-                                                                        style="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#828282;text-align:center;line-height:120%;">
-                                                                        <div>Copyright &#169; 2022. All rights reserved.
-                                                                        </div>
-                                                                        <div>If you don't want to receive these emails
-                                                                            from us in the future, please <a
-                                                                                href="https://app.omegaconstructionmanagement.com/profile"
-                                                                                target="_blank"
-                                                                                style="text-decoration:none;color:#828282;"><span
-                                                                                    style="color:#828282;">unsubscribe</span></a>
-                                                                        </div>
-                                                                    </div>
-
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                    <!-- // end of footer -->
+                    
 
                 </td>
             </tr>
