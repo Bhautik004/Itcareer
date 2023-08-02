@@ -9,7 +9,7 @@ class Branch extends Model
 {
     use HasFactory;
     protected $fillable = [
-            'name','state','city','district','phone','email','status','address','area'
+            'name','state','city','district','phone','email','status','address','area','branch_code'
     ];
 
      public function stateName() {

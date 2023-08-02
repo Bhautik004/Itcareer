@@ -46,6 +46,7 @@
                         <thead>
                             <tr>
                                 <th>No.</th>
+                                <th>Branch Code</th>
                                 <th>Branch Name</th>
                                 <th>Email</th>
                                 <th>Contact Number</th>
@@ -61,6 +62,7 @@
                             @php $count++;@endphp
                             <tr>
                               <td>{{$count}}</td>
+                              <td>{{ $branchdata['branch_code'] }} </td>
                               <td>{{ $branchdata['name'] }} </td>
                               <td>{{ $branchdata['email'] }}</td>
                               <td>{{ $branchdata['phone'] }}</td>

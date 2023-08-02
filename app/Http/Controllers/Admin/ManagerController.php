@@ -11,6 +11,7 @@ use App\Models\Branch;
 use App\Models\State;
 use Illuminate\Support\Carbon;
 use App\Models\Role;
+use Mail;
 
 class ManagerController extends Controller
 {
@@ -93,8 +94,22 @@ class ManagerController extends Controller
             $get_manager_role_id = Role::select('id')->where('slug','=','manager')->first();
             $input['role'] = $get_manager_role_id->id;
             $input['password'] = "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi" ; // password
-
             $managers = User::create($input);
+
+
+            $name = $input['f_name'].$input['l_name'];
+            $email = $input['email'];
+            $password = "password";    
+            $company_email = "itcareer.help4you@gmail.com";
+            $title = "You are selected for our Branch Head";
+            $brnchname = "xyz";
+
+            Mail::send('admin.email.manager', ['title'=>$title,'name'=>$name,'email'=>$email,'password'=>$password,'brnchname'=>$brnchname], 
+                function ($message) use ($name,$email,$password,$title,$company_email,$brnchname){
+                $message->from($company_email);
+                $message->to($email);
+                $message->subject('Congratulations '.$name);
+            });
 
             return redirect()->route('managers.index')
             ->with('message', 'Manager Register successfully.')->with('loader',true);

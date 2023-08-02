@@ -36,6 +36,17 @@
                             <div class="card-body">
                                 
                                 <div class="row">
+                                    
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Branch Code</label>
+                                            <input type="text" name="branch_code" class="form-control" value="{{ old('branch_code') }}" placeholder="Enter Branch Code">
+                                            @if ($errors->has('branch_code'))
+                                            <span class="text-danger">{{ $errors->first('branch_code') }}</span>
+                                            @endif
+                                        </div>
+                                    </div>
+
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Branch name</label>

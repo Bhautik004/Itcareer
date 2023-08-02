@@ -57,6 +57,7 @@ class BranchController extends Controller
             'state'          => 'required|not_in:0',
             'city'          => 'required|not_in:0',
             'area'          => 'required|',
+            'branch_code'    => 'required|',
         ],
         [
             'name.required'=>'Branch name should not be blank.',
@@ -66,6 +67,7 @@ class BranchController extends Controller
             'state.required'=>'Please select state',
             'city.required'=>'Please Select District',
             'area.required'=>'Area should not be blank.',
+            'branch_code.required'=>'Branch Code should not be blank.',
         ]);
         $input = $request->all();
         $branch = Branch::create($input);
@@ -120,6 +122,8 @@ class BranchController extends Controller
             'state'          => 'required|not_in:0',
             'city'          => 'required|not_in:0',
             'area'          => 'required|',
+            'branch_code'    => 'required|',
+
         ],
         [
             'name.required'=>'Branch name should not be blank.',
@@ -129,6 +133,8 @@ class BranchController extends Controller
             'state.required'=>'Please select state',
             'city.required'=>'Please Select District',
             'area.required'=>'Area should not be blank.',
+            'branch_code.required'=>'Branch Code should not be blank.',
+
         ]);
 
 
