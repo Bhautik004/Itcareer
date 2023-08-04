@@ -87,7 +87,7 @@
                                             @endif
                                         </div>
                                     </div>
-                                    <div class="col-sm-3">
+                                    {{-- <div class="col-sm-3">
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Email Id</label>
                                             <input type="text" class="form-control" name="email"
@@ -96,7 +96,7 @@
                                                 <span class="text-danger">{{ $errors->first('email') }}</span>
                                             @endif
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <div class="row">
 
@@ -268,7 +268,7 @@
                                     </div>
 
                                     
-                                    <div class="col-md-3">
+                                    {{-- <div class="col-md-3">
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Choose Signature</label>
                                             <input accept="image/png, image/gif, image/jpeg, image/jpg"     name="signature" class="form-control" type="file" >
@@ -276,7 +276,7 @@
                                         @if ($errors->has('signature'))
                                                 <span class="text-danger">{{ $errors->first('signature') }}</span>
                                         @endif
-                                    </div>
+                                    </div> --}}
 
                                     
                                     

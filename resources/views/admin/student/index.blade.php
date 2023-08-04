@@ -96,7 +96,9 @@
                       <td>{{$count}}</td>
                       <td>{{$studentsData->register_no}}</td>
                         @if(Auth::user()->role == 1)
-                        <td>{{$studentsData->branchName->name}}</td>
+                          <td>
+                            {{ isset($studentsData->branchName->name) ? $studentsData->branchName->name : "Admin Branch" }}
+                          </td>
                         @endif
                       <td>
                         @if($studentsData->profile_pic)
@@ -111,7 +113,7 @@
                       <td >
                         {{$studentsData->f_name}} {{$studentsData->l_name}}
                      </td>
-                     <td>{{$studentsData->email}}<br>{{$studentsData->phone}}<br>Date of Birth : {{$studentsData->dob}}
+                     <td>{{$studentsData->phone}}<br>Date of Birth : {{$studentsData->dob}}
                         </td>
                         <td>{{$studentsData->courseName->name}}</td>
                       <td>

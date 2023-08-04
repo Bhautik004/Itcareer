@@ -24,7 +24,8 @@ use Illuminate\Support\Facades\Request as Input;
 */
 
 Route::get('/', function () {
-    return view('frontend.index');
+    $data['courses'] = Course::get(["name","id"]);
+    return view('frontend.index',$data);
 });
 
 

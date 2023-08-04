@@ -38,7 +38,7 @@
     <tbody>
       <tr>
         <td rowspan="13"><img src="/certificate_img/{{$data->photo_name}}" width="150px" height="200px" alt=""></td>
-        <td>Registration No : </td>
+        <td>Certificate No : </td>
         <td>{{$data->register_no}}</td>
       </tr>
       <tr>
@@ -69,12 +69,10 @@
         <td>Exam Date : </td>
         <td>{{$data->exam_date}}</td>
       </tr>
-        
       <tr>
         <td>Certificate Issue :  </td>
         <td>YES</td>
       </tr>
-
       <tr>
         <td>Issue Date :  </td>
         <td>{{$data->issue_date}}</td>
@@ -87,7 +85,6 @@
         <td>Grade :</td>
         <td>{{$data->grade}}</td>
       </tr>
-      
     </tbody>
   </table>
   <p class="fw-bold">Note : Student Verification print does not required Signature.</p>

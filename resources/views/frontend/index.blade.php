@@ -5237,28 +5237,14 @@
 											data-id="fed78b1" data-element_type="widget"
 											data-settings="{&quot;_animation&quot;:&quot;bounceInRight&quot;}"
 											data-widget_type="html.default">
-											<div class="elementor-widget-container">
+											<div class="elementor-widget-container" style="height: 350px;">
 												<div class="holder">
 													<ul id="ticker01">
 														<B>
-															<li><a href="#">The first thing that most Javascript
-																	programmers</a></li>
-															<li><a href="#">End up doing is adding some code</a></li>
-															<li><a href="#">The code that you want to run</a></li>
-															<li><a href="#">Inside of which is the code that you want to
-																	run</a></li>
-															<li><a href="#">Right when the page is loaded</a></li>
-															<li><a href="#">Problematically, however, the Javascript
-																	code</a></li>
-															<li><a href="#">The first thing that most Javascript
-																	programmers</a></li>
-															<li><a href="#">End up doing is adding some code</a></li>
-															<li><a href="#">The code that you want to run</a></li>
-															<li><a href="#">Inside of which is the code that you want to
-																	run</a></li>
-															<li><a href="#">Right when the page is loaded</a></li>
-															<li><B><a href="#">Problematically, however, the Javascript
-																		code</a></B></li>
+															@foreach($courses as $value)
+															<li><a href="{{route('course.index')}}">{{$value->name}}</a></li>
+															@endforeach		
+															
 														</B>
 													</ul>
 												</div>
@@ -6735,7 +6721,7 @@
 													<div class="elementor-icon-box-content">
 														<h5 class="elementor-icon-box-title">
 															<a href="{{route('studentverify.index')}}">
-																STUDENT VERIFICATION </a>
+																CERTIFICATE VERIFICATION </a>
 														</h5>
 													</div>
 												</div>
@@ -7095,7 +7081,6 @@
 													src="wp-content/uploads/2023/05/eeee-150x150.png"
 													class="attachment-thumbnail size-thumbnail wp-image-3907" alt=""
 													loading="lazy"
-													srcset="https://itcareerinstitute.org/wp-content/uploads/2023/05/eeee-2048x2048.png 2048w"
 													sizes="(max-width: 150px) 100vw, 150px" />
 											</div>
 										</div>
@@ -7109,7 +7094,7 @@
 														<span class="elementor-counter-number-prefix"></span>
 														<span class="elementor-counter-number" data-duration="2000"
 															data-to-value="3000" data-from-value="0"
-															data-delimiter=",">0</span>
+															data-delimiter=",">2300+</span>
 														<span class="elementor-counter-number-suffix"></span>
 													</div>
 													<div class="elementor-counter-title">Students Enrolled</div>
@@ -7140,7 +7125,7 @@
 														<span class="elementor-counter-number-prefix"></span>
 														<span class="elementor-counter-number" data-duration="2000"
 															data-to-value="2700" data-from-value="0"
-															data-delimiter=",">0</span>
+															data-delimiter=",">2000+</span>
 														<span class="elementor-counter-number-suffix"></span>
 													</div>
 													<div class="elementor-counter-title">Students Trained</div>
@@ -7171,7 +7156,7 @@
 														<span class="elementor-counter-number-prefix"></span>
 														<span class="elementor-counter-number" data-duration="2000"
 															data-to-value="2650" data-from-value="0"
-															data-delimiter=",">0</span>
+															data-delimiter=",">1500+</span>
 														<span class="elementor-counter-number-suffix"></span>
 													</div>
 													<div class="elementor-counter-title">Students Certified</div>
@@ -7198,7 +7183,7 @@
 						</section>
 						<!-- Start of CuterCounter Code -->
 						<a href="https://www.cutercounter.com/" target="_blank" style="margin-top: 20px;margin-left:10px;"><img
-								src="https://www.cutercounter.com/hits.php?id=hvmxnpqpx&nd=6&style=80" border="0" alt="hit counter"></a>
+								src="https://www.cutercounter.com/hits.php?id=hvmxnpqpx&nd=6&style=80" border="0" alt="hit counter" style="height: 57px;"></a>
 						<!-- End of CuterCounter Code -->
 					</div>
 					<div data-column="widget-area-1">

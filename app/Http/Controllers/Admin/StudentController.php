@@ -35,7 +35,6 @@ class StudentController extends Controller
             $get_student_role_id = Role::where('slug','=','user')->pluck('id');
             if(auth()->user()->roles->slug == "super-admin"){
                 $students = User::with('courseName')->where("role",'=',$get_student_role_id)->orderBy('status', 'DESC')->orderBy('id','DESC')->get();
-
             }else{
                 $branch_id = auth()->user()->branch_id;
                 $students = User::with('courseName')->where("role",'=',$get_student_role_id)->where('branch_id',$branch_id)->orderBy('status', 'DESC')->orderBy('id','DESC')->get();
@@ -78,20 +77,20 @@ class StudentController extends Controller
                 'f_name'                    => 'required',
                 'm_name'                    => 'required',
                 'l_name'                    => 'required',
-                'email'                     => 'required|',
+                'email'                     => 'nullable|',
                 'phone'                     => 'required|numeric|digits:10',
                 'address'                   => 'required',
                 'dob'                       => 'required',
                 'gender'                    => 'required|not_in:0',
                 'state'                     => 'required|not_in:0',
                 'city'                      => 'required|not_in:0',
-                'alter_phone'               => 'required|numeric|digits:10',
+                'alter_phone'               => 'nullable|numeric|digits:10',
                 'pincode'                   => 'required|numeric|digits:6',
                 'last_qualification'        => 'required|',
                 'course_id'                 => 'required|not_in:0',
                 'id_proof'                  => 'required',
                 'last_marksheet'            => 'required',
-                'signature'                 => 'required',
+                'signature'                 => 'nullable',
                 'profile_pic'                 => 'required',
                 ],
                 [
@@ -145,7 +144,13 @@ class StudentController extends Controller
 
             $dob_u = Carbon::parse($request->dob);
             $input['dob'] = $dob_u;
-            $input['branch_id'] = auth()->user()->branch_id;
+
+            if(auth()->user()->roles->slug == "super-admin"){
+                $branch_id = 0;
+            }else{
+                $input['branch_id'] = auth()->user()->branch_id;
+            }
+            
             $get_student_role_id = Role::select('id')->where('slug','=','user')->first();
 
             $input['role'] = $get_student_role_id->id;
@@ -199,14 +204,14 @@ class StudentController extends Controller
                 'f_name'                    => 'required',
                 'm_name'                    => 'required',
                 'l_name'                    => 'required',
-                'email'                     => 'required|',
+                'email'                     => 'nullable|',
                 'phone'                     => 'required|numeric|digits:10',
                 'address'                   => 'required',
                 'dob'                       => 'required',
                 'gender'                    => 'required|not_in:0',
                 'state'                     => 'required|not_in:0',
                 'city'                      => 'required|not_in:0',
-                'alter_phone'               => 'required|numeric|digits:10',
+                'alter_phone'               => 'nullable|numeric|digits:10',
                 'pincode'                   => 'required|numeric|digits:6',
                 'last_qualification'        => 'required|',
                 'course_id'                 => 'required|not_in:0',
@@ -253,17 +258,19 @@ class StudentController extends Controller
             }
 
             
-            if($request->signature != ''){
-                $fileName = $request->register_no.time().'.'.$request->signature->getClientOriginalExtension();
-                $request->signature->move(public_path('signature'), $fileName);
-                $input['signature'] =$fileName;
-            }
+            // if($request->signature != ''){
+            //     $fileName = $request->register_no.time().'.'.$request->signature->getClientOriginalExtension();
+            //     $request->signature->move(public_path('signature'), $fileName);
+            //     $input['signature'] =$fileName;
+            // }
 
             $dob_u = Carbon::parse($request->dob);
             $input['dob'] = $dob_u;
 
             $get_student_role_id = Role::select('id')->where('slug','=','user')->first();
             $input['role'] = $get_student_role_id->id;
+
+            if(auth)
 
             $user->update($input);
             
@@ -333,12 +340,36 @@ class StudentController extends Controller
         if(auth()->user()->roles->slug == "super-admin"){
             $branch_id = 0;
             $studentList =  StudentVerify::select('student_id')->where('status',0)->get();
-            $students = User::with('verifyInfo')->whereIn('id',$studentList)->get();
-
+            $students = User::with('verifyInfo','courseName')->whereIn('id',$studentList)->get();
+            $ids = [];
+            foreach($students as $value){
+                    $get_admission_date = $value['created_at'];
+                    $duration_month = explode(' ', trim($value['courseName']['duration']))[0];
+                    $get_duration_add_month = Carbon::parse($get_admission_date)->addMonth($duration_month)->format('m-d-Y');
+                   
+                    if(Carbon::now()->format('m-d-Y') == $get_duration_add_month){
+                       $ids[] = $value['id'];
+                    }
+            }
+           
+            $students = User::with('verifyInfo','courseName')->whereIn('id',$ids)->get();
         }else{
             $branch_id = auth()->user()->branch_id;
             $studentList =  StudentVerify::where('branch_id',$branch_id)->where('status',0)->get();
             $students = User::with('verifyInfo')->whereIn('id',$studentList)->get();
+            $ids = [];
+            foreach($students as $value){
+                    $get_admission_date = $value['created_at'];
+                    $duration_month = explode(' ', trim($value['courseName']['duration']))[0];
+                    $get_duration_add_month = Carbon::parse($get_admission_date)->addMonth($duration_month)->format('m-d-Y');
+                   
+                    if(Carbon::now()->format('m-d-Y') == $get_duration_add_month){
+                       $ids[] = $value['id'];
+                    }
+            }
+           
+            $students = User::with('verifyInfo','courseName')->whereIn('id',$ids)->get();
+
         }
         return view('admin.student.verifystudent', compact('students'));
     }
@@ -381,12 +412,14 @@ class StudentController extends Controller
 
         if(auth()->user()->roles->slug == "super-admin"){
             $branch_id = 0;
-            $studentList =  StudentVerify::select('student_id')->get();
+            $studentList =  StudentVerify::select('student_id')->where('status',1)->get();
             $students = User::with('verifyInfo','examInfo')->whereIn('id',$studentList)->get();
+
+            // dd($students);
 
         }else{
             $branch_id = auth()->user()->branch_id;
-            $studentList =  StudentVerify::where('branch_id',$branch_id)->get();
+            $studentList =  StudentVerify::where('branch_id',$branch_id)->where('status',1)->get();
             $students = User::with('verifyInfo','examInfo')->whereIn('id',$studentList)->get();
         }
         return view('admin.student.examschedule', compact('students'));

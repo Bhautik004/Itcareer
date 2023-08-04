@@ -131,7 +131,7 @@ foreach ($permissionData as $perArr) {
 
                     
 
-                    <li class="nav-item {{ request()->segment(2) == 'students' ? 'menu-open' : '' }} {{ request()->segment(2) == 'studentadmissions' ? 'menu-open' : '' }} {{ request()->segment(2) == 'onDemandExams' ? 'menu-open' : '' }} {{ request()->segment(2) == 'studentVerify' ? 'menu-open' : '' }} ">
+                    <li class="nav-item {{ request()->segment(2) == 'students' ? 'menu-open' : '' }} {{ request()->segment(2) == 'studentadmissions' ? 'menu-open' : '' }} {{ request()->segment(2) == 'onDemandExams' ? 'menu-open' : '' }} {{ request()->segment(2) == 'studentVerify' ? 'menu-open' : '' }} {{ request()->segment(2) == 'examSchedule' ? 'menu-open' : '' }} ">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-copy"></i>
                             <p>Entry Form<i class="fas fa-angle-left right"></i></p>

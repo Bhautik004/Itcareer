@@ -3793,7 +3793,7 @@
                                                     data-widget_type="button.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-button-wrapper">
-                                                            <a href="#"
+                                                            <a href="{{route('admission.index')}}"
                                                                 class="elementor-button-link elementor-button elementor-size-xl"
                                                                 role="button">
                                                                 <span class="elementor-button-content-wrapper">

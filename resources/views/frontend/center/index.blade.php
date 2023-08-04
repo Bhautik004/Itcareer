@@ -4954,7 +4954,7 @@
                         <a href="https://www.cutercounter.com/" target="_blank"
                             style="margin-top: 20px;margin-left:10px;"><img
                                 src="https://www.cutercounter.com/hits.php?id=hvmxnpqpx&nd=6&style=80" border="0"
-                                alt="hit counter"></a>
+                                alt="hit counter" style="height: 57px;"></a>
                         <!-- End of CuterCounter Code -->
                     </div>
                     <div data-column="widget-area-1">

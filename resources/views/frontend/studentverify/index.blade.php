@@ -3475,7 +3475,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 		<div class="container mt-3">
-			<h4>Student verification</h4>
+			<h4>Certificate verification</h4>
 			<table class="table table-bordered">
 			  <tbody>
 				<tr > 
@@ -3484,7 +3484,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             <form method="post" action="/search">
                 {{ csrf_field() }}
 				<tr>       
-				  <td>Registration no <span class="text-danger">*</span></td>
+				  <td>Certificate no <span class="text-danger">*</span></td>
 				  <td><input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" style="height: 20px; width: 220px;"  name="q" required></td>
 				  <td>Birth Date</td>
 				  <td>
@@ -3595,7 +3595,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 						</section>
 						<!-- Start of CuterCounter Code -->
 												<a href="https://www.cutercounter.com/" target="_blank" style="margin-top: 20px;margin-left:10px;"><img
-														src="https://www.cutercounter.com/hits.php?id=hvmxnpqpx&nd=6&style=80" border="0" alt="hit counter"></a>
+														src="https://www.cutercounter.com/hits.php?id=hvmxnpqpx&nd=6&style=80"  style="height: 57px;" border="0" alt="hit counter"></a>
 												<!-- End of CuterCounter Code -->
 					</div>
 					<div data-column="widget-area-1">

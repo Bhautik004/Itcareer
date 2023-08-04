@@ -48,16 +48,10 @@
                                     @if(Auth::user()->role == 1)
                                         <th>Center Name</th>
                                     @endif
-                                    <th>Profile</th>
                                     <th>Name</th>
-                                    <th>Contact</th>
+                                    <th>Student Login Id</th>
                                     <th>Course name</th>
-                                    <th>Transaction Number</th>
-                                    <th>Transaction Date</th>
-                                    <th>Exam Generate Date</th>
-                                    <th>Exam Password</th>
-
-                                   
+                                    <th>Exam Password</th>                                   
                                 </tr>
                             </thead>
                             <tbody>
@@ -68,42 +62,18 @@
                                             <td>{{$count}}</td>
                                             <td>{{$studentsData->register_no}}</td>
                                             @if(Auth::user()->role == 1)
-                                            <td>{{$studentsData->branchName->name}}</td>
-                                            @endif
                                             <td>
-                                                @if($studentsData->profile_pic)
-                                                <img class="direct-chat-img mr-3 frame"
-                                                    src="{{$url}}{{'/'.$studentsData->profile_pic}}" alt="Message User Image">
-                                                @elseif($studentsData->gender == 'f')
-                                                <img class="direct-chat-img mr-3 frame" src="{{asset('images/female.png')}}"
-                                                    alt="Message User Image">
-                                                @else
-                                                <img class="direct-chat-img mr-3 frame" src="{{asset('images/male.png')}}"
-                                                    alt="Message User Image">
-
-                                                @endif
+                                                {{ isset($studentsData->branchName->name) ? $studentsData->branchName->name : "Admin Branch" }}
                                             </td>
+                                            @endif
                                             <td>
                                                 {{$studentsData->f_name}} {{$studentsData->l_name}}
                                             </td>
-                                            <td>{{$studentsData->email}}<br>{{$studentsData->phone}}<br>Date of Birth :
-                                                {{$studentsData->dob}}
-                                            </td>
+                                           <td>{{$studentsData->examInfo->student_user_id}}</td> 
                                             <td>{{$studentsData->courseName->name}}</td>
-                                            <td>
-                                                {{$studentsData->verifyInfo->trx_no}}
-                                            </td>
-                                            <td>
-                                                {{$studentsData->verifyInfo->trx_date}}
-                                            </td>
-                                            <td>{{$studentsData->verifyInfo->created_at->format('d-m-Y')}}</td>
                                             <td>{{$studentsData->examInfo->student_password}}</td>
-                                        
                                         </tr>
                                     @endforeach
-                                    {{-- <input type="submit" value="Submit"> --}}
-
-                                   
                             </tbody>
                         </table>
                       
