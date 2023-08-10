@@ -58,6 +58,9 @@ Route::prefix("admin")->group(function(){
         Route::resource('/reports', Admin\ReportsController::class);
         Route::resource('/gallery', Admin\GalleryController::class);
 
+        Route::resource('/questions', Admin\QuestionsController::class);
+        Route::resource('/options', Admin\OptionController::class);
+
 
         Route::post('users/update', 'Admin\UserController@update')->name('users.update-user');
         Route::post('admin/users/updatepassword/', 'Admin\UserController@updatepassword')->name('users.updatepassword');
@@ -90,8 +93,14 @@ Route::prefix("admin")->group(function(){
 
         Route::post('galleries/destroy', 'Admin\GalleryController@destroy')->name('galleries.destroy');
 
+        Route::post('que/destroy', 'Admin\QuestionsController@destroy')->name('que.destroy');
+        Route::post('opt/destroy', 'Admin\OptionController@destroy')->name('opt.destroy');
+
 
         Route::post('import', 'Admin\StudentController@importData')->name('admin.import');
+
+        Route::post('Questionimport', 'Admin\QuestionsController@questionData')->name('admin.question.import');
+        Route::post('Optioninport', 'Admin\OptionController@Optioninport')->name('admin.option.import');
 
     });
 });

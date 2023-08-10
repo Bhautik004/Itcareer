@@ -15,8 +15,7 @@ return new class extends Migration
     {
         //
          Schema::table('users', function($table) {
-            $table->string('email')->nullable();
-            $table->string('alter_phone')->nullable();
+            $table->string('username')->nullable();
         });
     }
 

@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\Request as Input;
 Route::get('/', function () {
     $data['courses'] = Course::get(["name","id"]);
     return view('frontend.index',$data);
-});
+})->name("main");
 
 
 Route::get('/course', function () {
@@ -111,6 +111,17 @@ Route::post('/course-filter', [CourseController::class, 'courseSearch'])->name('
 
 Route::post('/franchise-form', [FranchiseController::class, 'store'])->name('franchise.store');
 Route::post('/student-form', [studentEnquiryController::class, 'store'])->name('studentEnquiry.store');
+Route::post('/student-exam', [studentEnquiryController::class, 'ExamData'])->name('studentExam');
+Route::post('/Examstore', [studentEnquiryController::class, 'Examstore'])->name('Examstore');
+Route::get('/student-questionPaper/{id}', [studentEnquiryController::class, 'questionPaper'])->name('questionPaper');
+Route::get('/student-result-show/{id}', [studentEnquiryController::class, 'show'])->name('client.results.show');
+
+Route::post('/logout', 'Admin\studentEnquiryController@logout')->name('admin.logout');
+Route::get('send/{result_id}', 'Admin\studentEnquiryController@send')->name('client.results.send');
+
+
+
+
 
 Route::get('/student/pdf/{id}', [UserController::class, 'createPDF'])->name('student.pdf');
 

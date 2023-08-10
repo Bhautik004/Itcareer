@@ -2994,8 +2994,7 @@
     <link rel='stylesheet' id='um_fonticons_fa-css'
         href='../../wp-content/plugins/ultimate-member/assets/css/um-fonticons-fad315.css?ver=2.6.0' media='all' />
     <link rel='stylesheet' id='select2-css'
-        href='../../wp-content/plugins/ultimate-member/assets/css/select2/select2.min4819.css?ver=4.0.13'
-        media='all' />
+        href='../../wp-content/plugins/ultimate-member/assets/css/select2/select2.min4819.css?ver=4.0.13' media='all' />
     <link rel='stylesheet' id='um_crop-css'
         href='../../wp-content/plugins/ultimate-member/assets/css/um-cropd315.css?ver=2.6.0' media='all' />
     <link rel='stylesheet' id='um_modal-css'
@@ -3011,8 +3010,7 @@
     <link rel='stylesheet' id='um_fileupload-css'
         href='../../wp-content/plugins/ultimate-member/assets/css/um-fileuploadd315.css?ver=2.6.0' media='all' />
     <link rel='stylesheet' id='um_datetime-css'
-        href='../../wp-content/plugins/ultimate-member/assets/css/pickadate/defaultd315.css?ver=2.6.0'
-        media='all' />
+        href='../../wp-content/plugins/ultimate-member/assets/css/pickadate/defaultd315.css?ver=2.6.0' media='all' />
     <link rel='stylesheet' id='um_datetime_date-css'
         href='../../wp-content/plugins/ultimate-member/assets/css/pickadate/default.dated315.css?ver=2.6.0'
         media='all' />
@@ -3030,8 +3028,7 @@
     <link rel='stylesheet' id='um_default_css-css'
         href='../../wp-content/plugins/ultimate-member/assets/css/um-old-defaultd315.css?ver=2.6.0' media='all' />
     <link rel='stylesheet' id='rishi-fonts-font-source-google-css'
-        href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap'
-        media='all' />
+        href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap' media='all' />
     <link rel='stylesheet' id='rishi-style-css' href='../../wp-content/themes/rishi/style.min1576.css?ver=1.2.1'
         media='all' />
     <style id='rishi-style-inline-css'>
@@ -3057,8 +3054,10 @@
     </script>
     <script src='../../wp-content/plugins/country-state-city-auto-dropdown/assets/js/script3781.js?ver=6.2.2'
         id='tc_csca-country-auto-script-js'></script>
-    <script src='../../wp-content/plugins/educare/assets/js/jquery-2.1.3.min3781.js?ver=6.2.2' id='jquery-min-js'></script>
-    <script src='../../wp-content/plugins/ultimate-member/assets/js/um-gdpr.mind315.js?ver=2.6.0' id='um-gdpr-js'></script>
+    <script src='../../wp-content/plugins/educare/assets/js/jquery-2.1.3.min3781.js?ver=6.2.2' id='jquery-min-js'>
+    </script>
+    <script src='../../wp-content/plugins/ultimate-member/assets/js/um-gdpr.mind315.js?ver=2.6.0' id='um-gdpr-js'>
+    </script>
     <link rel="https://api.w.org/" href="../wp-json/index.html" />
     <link rel="alternate" type="application/json" href="../wp-json/wp/v2/pages/3406.json" />
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
@@ -3088,8 +3087,7 @@
     <meta name="generator"
         content="Elementor 3.12.1; features: e_dom_optimization, e_optimized_assets_loading, e_optimized_css_loading, a11y_improvements, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
     <link rel="icon" href="../../wp-content/uploads/2023/04/cropped-LOGO-01-scaled-1-32x32.jpg" sizes="32x32" />
-    <link rel="icon" href="../../wp-content/uploads/2023/04/cropped-LOGO-01-scaled-1-192x192.jpg"
-        sizes="192x192" />
+    <link rel="icon" href="../../wp-content/uploads/2023/04/cropped-LOGO-01-scaled-1-192x192.jpg" sizes="192x192" />
     <link rel="apple-touch-icon" href="../../wp-content/uploads/2023/04/cropped-LOGO-01-scaled-1-180x180.jpg" />
     <meta name="msapplication-TileImage"
         content="https://itcareerinstitute.org/wp-content/uploads/2023/04/cropped-LOGO-01-scaled-1-270x270.jpg" />
@@ -3255,11 +3253,10 @@
 
 <body
     class="page-template-default page page-id-3406 wp-custom-logo wp-embed-responsive box-layout rishi-has-blocks full-width rt-loading elementor-default elementor-kit-2430"
-    itemscope="" itemtype="http://schema.org/WebPage" data-link="type-2" data-forms="classic"
-    data-prefix="single_page" data-header="type-1:sticky" data-footer="type-1" itemscope="itemscope"
-    itemtype="http://schema.org/WebPage">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
-        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+    itemscope="" itemtype="http://schema.org/WebPage" data-link="type-2" data-forms="classic" data-prefix="single_page"
+    data-header="type-1:sticky" data-footer="type-1" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
         <defs>
             <filter id="wp-duotone-dark-grayscale">
                 <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
@@ -3273,8 +3270,8 @@
                 <feComposite in2="SourceGraphic" operator="in" />
             </filter>
         </defs>
-    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
-        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
         <defs>
             <filter id="wp-duotone-grayscale">
                 <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
@@ -3288,8 +3285,8 @@
                 <feComposite in2="SourceGraphic" operator="in" />
             </filter>
         </defs>
-    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
-        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
         <defs>
             <filter id="wp-duotone-purple-yellow">
                 <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
@@ -3303,8 +3300,8 @@
                 <feComposite in2="SourceGraphic" operator="in" />
             </filter>
         </defs>
-    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
-        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
         <defs>
             <filter id="wp-duotone-blue-red">
                 <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
@@ -3318,8 +3315,8 @@
                 <feComposite in2="SourceGraphic" operator="in" />
             </filter>
         </defs>
-    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
-        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
         <defs>
             <filter id="wp-duotone-midnight">
                 <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
@@ -3333,8 +3330,8 @@
                 <feComposite in2="SourceGraphic" operator="in" />
             </filter>
         </defs>
-    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
-        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
         <defs>
             <filter id="wp-duotone-magenta-yellow">
                 <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
@@ -3348,8 +3345,8 @@
                 <feComposite in2="SourceGraphic" operator="in" />
             </filter>
         </defs>
-    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
-        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
         <defs>
             <filter id="wp-duotone-purple-green">
                 <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
@@ -3363,8 +3360,8 @@
                 <feComposite in2="SourceGraphic" operator="in" />
             </filter>
         </defs>
-    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
-        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
         <defs>
             <filter id="wp-duotone-blue-orange">
                 <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
@@ -3381,8 +3378,7 @@
     </svg>
     <div id="main-container" class="site">
         <a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
-        <header id="header" class="site-header" data-id="type-1" itemscope=""
-            itemtype="https://schema.org/WPHeader">
+        <header id="header" class="site-header" data-id="type-1" itemscope="" itemtype="https://schema.org/WPHeader">
             <div data-device="desktop">
                 <div data-row="top" data-column-set="1">
                     <div class="customizer_builder__container">
@@ -3410,59 +3406,66 @@
                                             data-responsive="yes" itemscope=""
                                             itemtype="http://schema.org/SiteNavigationElement">
 
-<ul id="menu-primary" class="menu">
-    <li id="menu-item-1117"
-        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home  menu-item-1117 ">
-        <a href="/" aria-current="page">
-            <b>HOME</b>
-        </a>
-    </li>
-    <li id="menu-item-1124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1124 ">
-        <a href="{{ route('course.index') }}">
-            <b>COURSES</b>
-        </a>
-    </li>
-    <li id="menu-item-3412"
-        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3412 ">
-        <a href="{{ route('franchise.index') }}">
-            <b>FRANCHISE</b>
-        </a>
-    </li>
-    <li id="menu-item-1125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1125">
-        <a href="{{route('center.index')}}">
-            <b>CENTER</b>
-        </a>
-    </li>
+                                            <ul id="menu-primary" class="menu">
+                                                <li id="menu-item-1117"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home  menu-item-1117 ">
+                                                    <a href="/" aria-current="page">
+                                                        <b>HOME</b>
+                                                    </a>
+                                                </li>
+                                                <li id="menu-item-1124"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1124 ">
+                                                    <a href="{{ route('course.index') }}">
+                                                        <b>COURSES</b>
+                                                    </a>
+                                                </li>
+                                                <li id="menu-item-3412"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3412 ">
+                                                    <a href="{{ route('franchise.index') }}">
+                                                        <b>FRANCHISE</b>
+                                                    </a>
+                                                </li>
+                                                <li id="menu-item-1125"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1125">
+                                                    <a href="{{route('center.index')}}">
+                                                        <b>CENTER</b>
+                                                    </a>
+                                                </li>
 
-    <li id="menu-item-3416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3416">
-        <a href="{{ route('studentverify.index') }}">
-            <b>Certificate Verification</b>
-        </a>
-    </li>
+                                                <li id="menu-item-3416"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3416">
+                                                    <a href="{{ route('studentverify.index') }}">
+                                                        <b>Certificate Verification</b>
+                                                    </a>
+                                                </li>
 
-    <li id="menu-item-3414" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3414 animated-submenu current-menu-item page_item page-item-6 current_page_item">
-        <a href="{{ route('exam.index') }}">
-            <b>EXAM</b>
-        </a>
-    </li>
+                                                <li id="menu-item-3414"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3414 animated-submenu current-menu-item page_item page-item-6 current_page_item">
+                                                    <a href="{{ route('exam.index') }}">
+                                                        <b>EXAM</b>
+                                                    </a>
+                                                </li>
 
-    <li id="menu-item-1125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1125">
-        <a href="{{route('gallary.index')}}">
-            <b>GALLARY</b>
-        </a>
-    </li>
-    <li id="menu-item-3416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3416">
-        <a href="{{ route('contact.index') }}">
-            <b>CONTACT</b>
-        </a>
-    </li>
+                                                <li id="menu-item-1125"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1125">
+                                                    <a href="{{route('gallary.index')}}">
+                                                        <b>GALLARY</b>
+                                                    </a>
+                                                </li>
+                                                <li id="menu-item-3416"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3416">
+                                                    <a href="{{ route('contact.index') }}">
+                                                        <b>CONTACT</b>
+                                                    </a>
+                                                </li>
 
-    <li id="menu-item-3417" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3417">
-        <a href="{{ route('admin.home') }}">
-            <b>LOGIN</b>
-        </a>
-    </li>
-</ul>
+                                                <li id="menu-item-3417"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3417">
+                                                    <a href="{{ route('admin.home') }}">
+                                                        <b>LOGIN</b>
+                                                    </a>
+                                                </li>
+                                            </ul>
                                         </nav>
 
                                     </div>
@@ -3491,14 +3494,13 @@
                             <div class="customizer_builder__container">
                                 <div data-column="start" data-placements="1">
                                     <div data-items="primary">
-                                        <div class="site-branding" data-id="logo" data-logo="top"
-                                            itemscope="itemscope" itemtype="https://schema.org/Organization">
+                                        <div class="site-branding" data-id="logo" data-logo="top" itemscope="itemscope"
+                                            itemtype="https://schema.org/Organization">
 
-                                            <a href="../../index.html" class="site-logo-container"
-                                                rel="home"><img width="150" height="150"
+                                            <a href="../../index.html" class="site-logo-container" rel="home"><img
+                                                    width="150" height="150"
                                                     src="../../wp-content/uploads/2023/05/78-e1685385265265.jpg"
-                                                    class="default-logo" alt="IT CAREER INSTITUTE"
-                                                    loading="lazy" /></a>
+                                                    class="default-logo" alt="IT CAREER INSTITUTE" loading="lazy" /></a>
                                             <span class="screen-reader-text site-title " itemprop="name">
                                                 <a href="../../index.html" rel="home" itemprop="url">
                                                 </a>
@@ -3550,32 +3552,26 @@
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1117">
                                         <a href="../../index.html"><B>HOME</B></a>
                                     </li>
-                                    <li
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1124">
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1124">
                                         <a href="../courses/index.html"><B>COURSES</B></a>
                                     </li>
-                                    <li
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3412">
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3412">
                                         <a href="../franchise/index.html"><B>FRANCHISE</B></a>
                                     </li>
-                                    <li
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3413">
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3413">
                                         <a href="../form/index.html"><B>FORM</B></a>
                                     </li>
                                     <li
                                         class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3406 current_page_item menu-item-3414">
                                         <a href="index.html" aria-current="page"><B>EXAM</B></a>
                                     </li>
-                                    <li
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1125">
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1125">
                                         <a href="../about/index.html"><B>ABOUT US</B></a>
                                     </li>
-                                    <li
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3416">
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3416">
                                         <a href="../contact/index.html"><B>CONTACT US</B></a>
                                     </li>
-                                    <li
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3417">
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3417">
                                         <a href="../user-login/index.html"><B>LOGIN</B></a>
                                     </li>
                                 </ul>
@@ -3585,7 +3581,6 @@
                 </section>
             </div>
         </div>
-        <div class="site-content reveal_none_desktop reveal_none_tablet reveal_none_mobile">
             <div class="rishi-container" data-strech=none>
                 <div class="main-content-wrapper clear" data-v-spacing="top:bottom" data-page-spacing="top:bottom">
 
@@ -3595,11 +3590,77 @@
                             <article id="post-3406"
                                 class="post-3406 page type-page status-publish hentry rishi-post no-post-thumbnail">
                                 <header class="entry-header">
-                                    <h1 class="entry-title">EXAM</h1>
+                                    <h1 class="entry-title">STUDENT ONLINE EXAM LOGIN</h1>
                                 </header><!-- .entry-header -->
 
 
                                 <div class="entry-content" itemprop="text">
+                                    <section
+                                        class="elementor-section elementor-top-section elementor-element elementor-element-0a84ad1 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                        data-id="0a84ad1" data-element_type="section"
+                                        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                        <div class="elementor-container elementor-column-gap-default">
+                                            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-92bd6b6"
+                                                data-id="92bd6b6" data-element_type="column">
+                                                <div class="elementor-widget-wrap elementor-element-populated">
+                                                    <section
+                                                        class="elementor-section elementor-inner-section elementor-element elementor-element-3d7d02e elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                                        data-id="3d7d02e" data-element_type="section">
+                                                        <div class="elementor-container elementor-column-gap-default">
+                                                            <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-09c0bee"
+                                                                data-id="09c0bee" data-element_type="column">
+                                                                <div
+                                                                    class="elementor-widget-wrap elementor-element-populated">
+                                                                    <div class="elementor-element elementor-element-883dcc2 elementor-widget elementor-widget-meafe-cf7"
+                                                                        data-id="883dcc2" data-element_type="widget"
+                                                                        data-widget_type="meafe-cf7.default">
+                                                                        <div class="elementor-widget-container">
+
+                                                                            <div class="wpcf7 no-js"
+                                                                                id="wpcf7-f1934-p1132-o1" lang="en-US"
+                                                                                dir="ltr">
+                                                                                
+                                                                                <form
+                                                                                    action="{{route('studentExam')}}"
+                                                                                    method="post"
+                                                                                    >
+                                                                                    @csrf
+                                                                                   
+                                                                                    <p><span class="wpcf7-form-control-wrap"
+                                                                                            data-name="text-294"><input
+                                                                                                size="40"
+                                                                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                                aria-required="true"
+                                                                                                aria-invalid="false"
+                                                                                                placeholder="User name"
+                                                                                                type="text"
+                                                                                                name="student_user_id" required /></span>
+                                                                                    </p>
+                                                                                    <p><span class="wpcf7-form-control-wrap"
+                                                                                            data-name="email-721"><input
+                                                                                                size="40"
+                                                                                                class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+                                                                                                aria-required="true"
+                                                                                                aria-invalid="false"
+                                                                                                placeholder="password"
+                                                                                                 type="password"
+                                                                                                name="student_password"  required/></span>
+                                                                                    </p>
+                                                                                    <p><input type="submit" value="Submit " />
+                                                                                    </p>
+                                                                                </form>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
                                 </div><!-- .entry-content -->
 
                             </article><!-- #post-## -->
@@ -3608,21 +3669,22 @@
 
                 </div><!-- .main-content-wrapper -->
             </div><!-- .rishi-container-->
-        </div><!-- .site-content -->
         <footer class="cb__footer" data-id="type-1" itemscope="" itemtype="https://schema.org/WPFooter">
             <div data-row="top">
                 <div class="cb__container" data-stack="tablet:mobile">
                     <div data-column="widget-area-5">
-                       <section id="block-9" class="widget hide_widget_title widget_block widget_media_image">
-                        <figure class="wp-block-image size-large is-resized"><img decoding="async" loading="lazy"
-                                src="wp-content/uploads/2023/05/fgghjhgj_page-0001-1024x1024.png" alt="" class="wp-image-4008" width="193"
-                                height="193">
-                    
-                    </section>
-                      <!-- Start of CuterCounter Code -->
-                                            <a href="https://www.cutercounter.com/" target="_blank" style="margin-top: 20px;margin-left:10px;"><img
-                                                    src="https://www.cutercounter.com/hits.php?id=hvmxnpqpx&nd=6&style=80" border="0" alt="hit counter"></a>
-                                            <!-- End of CuterCounter Code -->
+                        <section id="block-9" class="widget hide_widget_title widget_block widget_media_image">
+                            <figure class="wp-block-image size-large is-resized"><img decoding="async" loading="lazy"
+                                    src="wp-content/uploads/2023/05/fgghjhgj_page-0001-1024x1024.png" alt=""
+                                    class="wp-image-4008" width="193" height="193">
+
+                        </section>
+                        <!-- Start of CuterCounter Code -->
+                        <a href="https://www.cutercounter.com/" target="_blank"
+                            style="margin-top: 20px;margin-left:10px;"><img
+                                src="https://www.cutercounter.com/hits.php?id=hvmxnpqpx&nd=6&style=80" border="0"
+                                alt="hit counter"></a>
+                        <!-- End of CuterCounter Code -->
                     </div>
                     <div data-column="widget-area-1">
                         <section id="nav_menu-5" class="widget hide_widget_title widget_nav_menu">
@@ -3739,8 +3801,7 @@
 
                                     <span class="cb__icon-container">
 
-                                        <svg class="rt-icon" width="20" height="20"
-                                            viewbox="-21 -117 682.66672 682">
+                                        <svg class="rt-icon" width="20" height="20" viewbox="-21 -117 682.66672 682">
                                             <path
                                                 d="m626.8125 64.035156c-7.375-27.417968-28.992188-49.03125-56.40625-56.414062-50.082031-13.703125-250.414062-13.703125-250.414062-13.703125s-200.324219 0-250.40625 13.183593c-26.886719 7.375-49.03125 29.519532-56.40625 56.933594-13.179688 50.078125-13.179688 153.933594-13.179688 153.933594s0 104.378906 13.179688 153.933594c7.382812 27.414062 28.992187 49.027344 56.410156 56.410156 50.605468 13.707031 250.410156 13.707031 250.410156 13.707031s200.324219 0 250.40625-13.183593c27.417969-7.378907 49.03125-28.992188 56.414062-56.40625 13.175782-50.082032 13.175782-153.933594 13.175782-153.933594s.527344-104.382813-13.183594-154.460938zm-370.601562 249.878906v-191.890624l166.585937 95.945312zm0 0" />
                                         </svg>
@@ -3872,14 +3933,17 @@
         };
     </script>
     <script src='../../wp-includes/js/wp-util.min3781.js?ver=6.2.2' id='wp-util-js'></script>
-    <script src='../../wp-content/plugins/ultimate-member/assets/js/um-crop.mind315.js?ver=2.6.0' id='um_crop-js'></script>
+    <script src='../../wp-content/plugins/ultimate-member/assets/js/um-crop.mind315.js?ver=2.6.0' id='um_crop-js'>
+    </script>
     <script src='../../wp-content/plugins/ultimate-member/assets/js/um-modal.mind315.js?ver=2.6.0' id='um_modal-js'>
     </script>
     <script src='../../wp-content/plugins/ultimate-member/assets/js/um-jquery-form.mind315.js?ver=2.6.0'
         id='um_jquery_form-js'></script>
-    <script src='../../wp-content/plugins/ultimate-member/assets/js/um-fileuploadd315.js?ver=2.6.0' id='um_fileupload-js'>
+    <script src='../../wp-content/plugins/ultimate-member/assets/js/um-fileuploadd315.js?ver=2.6.0'
+        id='um_fileupload-js'>
     </script>
-    <script src='../../wp-content/plugins/ultimate-member/assets/js/pickadate/pickerd315.js?ver=2.6.0' id='um_datetime-js'>
+    <script src='../../wp-content/plugins/ultimate-member/assets/js/pickadate/pickerd315.js?ver=2.6.0'
+        id='um_datetime-js'>
     </script>
     <script src='../../wp-content/plugins/ultimate-member/assets/js/pickadate/picker.dated315.js?ver=2.6.0'
         id='um_datetime_date-js'></script>
@@ -3887,7 +3951,8 @@
         id='um_datetime_time-js'></script>
     <script src='../../wp-includes/js/dist/vendor/wp-polyfill-inert.min0226.js?ver=3.1.2' id='wp-polyfill-inert-js'>
     </script>
-    <script src='../../wp-includes/js/dist/vendor/regenerator-runtime.min8fa4.js?ver=0.13.11' id='regenerator-runtime-js'>
+    <script src='../../wp-includes/js/dist/vendor/regenerator-runtime.min8fa4.js?ver=0.13.11'
+        id='regenerator-runtime-js'>
     </script>
     <script src='../../wp-includes/js/dist/vendor/wp-polyfill.min2c7c.js?ver=3.15.0' id='wp-polyfill-js'></script>
     <script src='../../wp-includes/js/dist/hooks.min6c65.js?ver=4169d3cf8e8d95a3d6d5' id='wp-hooks-js'></script>
@@ -3897,13 +3962,16 @@
             'text direction\u0004ltr': ['ltr']
         });
     </script>
-    <script src='../../wp-content/plugins/ultimate-member/assets/js/um-raty.mind315.js?ver=2.6.0' id='um_raty-js'></script>
+    <script src='../../wp-content/plugins/ultimate-member/assets/js/um-raty.mind315.js?ver=2.6.0' id='um_raty-js'>
+    </script>
     <script src='../../wp-content/plugins/ultimate-member/assets/js/um-tipsy.mind315.js?ver=2.6.0' id='um_tipsy-js'>
     </script>
     <script src='../../wp-includes/js/jquery/jquery.masonry.minef70.js?ver=3.1.2b' id='jquery-masonry-js'></script>
-    <script src='../../wp-content/plugins/ultimate-member/assets/js/simplebar.mind315.js?ver=2.6.0' id='um_scrollbar-js'>
+    <script src='../../wp-content/plugins/ultimate-member/assets/js/simplebar.mind315.js?ver=2.6.0'
+        id='um_scrollbar-js'>
     </script>
-    <script src='../../wp-content/plugins/ultimate-member/assets/js/um-functions.mind315.js?ver=2.6.0' id='um_functions-js'>
+    <script src='../../wp-content/plugins/ultimate-member/assets/js/um-functions.mind315.js?ver=2.6.0'
+        id='um_functions-js'>
     </script>
     <script src='../../wp-content/plugins/ultimate-member/assets/js/um-responsive.mind315.js?ver=2.6.0'
         id='um_responsive-js'></script>

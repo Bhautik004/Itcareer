@@ -129,6 +129,24 @@ foreach ($permissionData as $perArr) {
                         @endif
                     </li>
 
+                    <li class="nav-item">
+                        @if (check_permission('questions', 'index') == '1')
+                        <a href="{{ route('questions.index') }}" class="nav-link {{ request()->segment(2) == 'questions' ? 'active' : '' }}">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Manage Questions</p>
+                        </a>
+                        @endif
+                    </li>
+
+                    <li class="nav-item">
+                        @if (check_permission('option', 'index') == '1')
+                        <a href="{{ route('options.index') }}" class="nav-link {{ request()->segment(2) == 'options' ? 'active' : '' }}">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Manage Options</p>
+                        </a>
+                        @endif
+                    </li>
+
                     
 
                     <li class="nav-item {{ request()->segment(2) == 'students' ? 'menu-open' : '' }} {{ request()->segment(2) == 'studentadmissions' ? 'menu-open' : '' }} {{ request()->segment(2) == 'onDemandExams' ? 'menu-open' : '' }} {{ request()->segment(2) == 'studentVerify' ? 'menu-open' : '' }} {{ request()->segment(2) == 'examSchedule' ? 'menu-open' : '' }} ">

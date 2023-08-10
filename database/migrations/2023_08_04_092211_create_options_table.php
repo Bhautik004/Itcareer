@@ -13,9 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        //
-         Schema::table('branches', function($table) {
-            $table->string('branch_code')->nullable();
+        Schema::create('options', function (Blueprint $table) {
+            $table->id();
+            $table->longText('option_text');
+            $table->integer('points')->nullable();
+            $table->integer('question_id');
+            $table->timestamps();
         });
     }
 
@@ -26,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('options');
     }
 };

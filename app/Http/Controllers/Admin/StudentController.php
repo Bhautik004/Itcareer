@@ -18,6 +18,8 @@ use PDF;
 use App\Models\CertificateRecord;
 use Illuminate\Support\Facades\Crypt;
 use App\Exports\UsersExport; 
+use Hash;
+
 class StudentController extends Controller
 {
     /**
@@ -363,7 +365,7 @@ class StudentController extends Controller
                     $duration_month = explode(' ', trim($value['courseName']['duration']))[0];
                     $get_duration_add_month = Carbon::parse($get_admission_date)->addMonth($duration_month)->format('m-d-Y');
                    
-                    if(Carbon::now()->format('m-d-Y') == $get_duration_add_month){
+                    if(Carbon::now()->format('m-d-Y') >= $get_duration_add_month){
                        $ids[] = $value['id'];
                     }
             }
@@ -387,9 +389,10 @@ class StudentController extends Controller
         }
 
         foreach ($selected_ids as $k => $v) {
+
             $info = User::select('id','f_name')->where('id',$v)->where('verify_status',1)->get()->first();
-           
             $password = $info['f_name'].'@'.$info['id'];
+
             StudentExam::create([
                 'student_id'=>$info['id'],
                 'student_user_id'=>$info['f_name'],
@@ -398,7 +401,12 @@ class StudentController extends Controller
                 'branch_id'=>$branch_id,
                 'status'=>1
             ]);
+
+            $encrypted =  Hash::make($password);
+            
+            User::where('id',$v)->update(['username'=>$info['f_name'],'password'=>$encrypted]);
             User::where('id',$v)->update(['verify_status'=>'2']);
+
             StudentVerify::where('student_id',$v)->update(['status'=>1]);
         }
         

@@ -49,7 +49,7 @@ class User extends Authenticatable
         'board_name',
         'passing_year',
         'percentage',
-        'board_name','passing_year','percentage','exam_date','trx_no'
+        'board_name','passing_year','percentage','exam_date','trx_no','username'
     ];
 
     /**
@@ -124,6 +124,11 @@ class User extends Authenticatable
 
     public function examInfo() {
         return $this->hasOne(StudentExam::class,'student_id'); // don't forget to add your full namespace
+    }
+
+    public function userResults()
+    {
+        return $this->hasMany(Result::class, 'user_id', 'id');
     }
 
 

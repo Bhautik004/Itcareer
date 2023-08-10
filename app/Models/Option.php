@@ -5,16 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Course extends Model
+class Option extends Model
 {
     use HasFactory;
+
     protected $fillable = [
-        'name','duration','content','course_img','status'
+        'points',
+        'question_id',
+        'option_text',
     ];
 
-
-     public function categoryQuestions()
+    public function question()
     {
-        return $this->hasMany(Questions::class, 'course_id', 'id');
+        return $this->belongsTo(Questions::class, 'question_id');
     }
+
+
+   
 }
